@@ -1,0 +1,144 @@
+#header {
+  background-color: var(--greyCharcoal);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+.navbar {
+  padding: 0;
+}
+.nav-item {
+  background-color: var(--greyCharcoal);
+  color: var(--white);
+  position: relative;
+  transition: 0.12s ease-in-out 0s;
+  z-index: 100;
+}
+.nav-item .dropdown-toggle {
+  border: none;
+  color: currentColor;
+  padding: 0;
+  position: absolute;
+  right: 0.5rem;
+  top: 1.5rem;
+  transform: translateY(-50%) rotate(0);
+  transition: 0.12s ease-in-out 0s;
+  z-index: 100;
+}
+.nav-item .dropdown-toggle .chev {
+  display: inline-block;
+}
+.nav-item .dropdown-toggle.show {
+  transform: translateY(-40%) rotate(180deg);
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  border: none;
+  color: currentColor;
+  line-height: 1;
+  padding: 1rem;
+}
+.navbar-expand-lg .navbar-nav .dropdown > .nav-link {
+  padding-right: 2rem;
+}
+.dropdown .dropdown-menu {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 90;
+}
+.dropdown .dropdown-menu .nav-item {
+  background-color: var(--greyCharcoal);
+  color: var(--white);
+}
+.dropdown .dropdown-menu .nav-link {
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  /* text-decoration: underline; */
+}
+.navbar-toggler {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 0;
+  color: var(--white);
+  height: 3rem;
+  line-height: 0;
+  margin: 0 0 0 auto;
+  outline: 0;
+  padding: 0;
+  width: 3rem;
+}
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="false"] {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23fff" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>');
+}
+.navbar-toggler[aria-expanded="true"] {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23fff" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>');
+}
+@media (pointer: fine) {
+  .nav-item:hover,
+  .nav-item:focus {
+    background-color: var(--orange);
+  }
+  .nav-item:hover .dropdown-toggle,
+  .nav-item:focus .dropdown-toggle {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .nav-item:hover > ul.dropdown-menu,
+  .nav-item:focus > ul.dropdown-menu {
+    display: block;
+  }
+  .dropdown .dropdown-menu .nav-item:hover,
+  .dropdown .dropdown-menu .nav-item:focus {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+  .dropdown .dropdown-menu .nav-item:hover .nav-link,
+  .dropdown .dropdown-menu .nav-item:focus .nav-link {
+    text-decoration: none;
+  }
+  .dropdown-menu .dropdown-hover:hover > ul.dropdown-menu,
+  .dropdown-menu .dropdown-hover:focus > ul.dropdown-menu {
+    display: block;
+    min-width: 12.5rem;
+    top: 0;
+    right: 0.5rem;
+    transform: translateX(100%);
+  }
+}
+@media only screen and (min-width: 920px) {
+  .dropdown .dropdown-menu {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+    min-width: 15rem;
+    position: absolute;
+    z-index: 0;
+  }
+}
+/* Large desktop */
+@media only screen and (min-width: 1200px) {
+  #header {
+    background-color: var(--headerBgColor);
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+  .nav-item {
+    background-color: var(--headerBgColor);
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    transition: 0.12s ease-in-out 0s;
+  }
+  .dropdown .dropdown-menu .nav-item {
+    background-color: var(--greyLighter);
+    color: var(--textColor);
+  }
+  .dropdown .dropdown-menu .nav-link {
+    padding: 1rem;
+    text-decoration: underline;
+  }
+}

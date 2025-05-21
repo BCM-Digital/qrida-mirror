@@ -1,0 +1,29 @@
+uuid: 92eeb831-4c10-43e5-b439-f05ab0a5ae2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.areas_of_experience
+id: taxonomy_term.areas_of_experience.default
+targetEntityType: taxonomy_term
+bundle: areas_of_experience
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

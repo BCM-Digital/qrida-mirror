@@ -1,0 +1,21 @@
+uuid: bb07cddd-fcc6-4c9d-b84f-f8664428fb5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_modal_item__body
+    - paragraphs.paragraphs_type.modal_item
+  module:
+    - text
+id: paragraph.modal_item.field_modal_item__body
+field_name: field_modal_item__body
+entity_type: paragraph
+bundle: modal_item
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

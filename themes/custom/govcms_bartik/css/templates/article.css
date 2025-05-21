@@ -1,0 +1,84 @@
+article.node--type-article .article-with-sidebar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+article.node--type-article .article-with-sidebar .node__content.clearfix,
+article.node--type-article .article-with-sidebar .field--name-field-image-and-text {
+    flex: 0 1 100%;
+    width: 100%;
+}
+
+article.node--type-article .article-with-sidebar .field--name-body {
+    flex: 0 1 100%;
+    width: 100%;
+}
+
+article.node--type-article .article-with-sidebar .field--name-field-webform {
+    flex: 0 1 100%;
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 0 12px;
+    width: 100%;
+}
+
+article form.webform-submission-form {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    article.node--type-article .article-with-sidebar .field--name-field-webform {
+        max-width: 720px;
+        padding: 0 12px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    article.node--type-article .article-with-sidebar .field--name-field-webform {
+        max-width: 960px;
+        padding: 0 12px;
+    }
+}
+
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+    article.node--type-article .article-with-sidebar .field--name-body {
+        flex: 0 1 66%;
+        margin-left: auto;
+        padding: 0 12px 0 6px;
+        max-width: 760px;
+        width: 66%;
+    }
+    
+    article.node--type-article .article-with-sidebar .field--name-field-webform {
+        flex: 0 1 34%;
+        margin-right: auto;
+        max-width: 380px;
+        padding: 0 18px;
+        width: 34%;
+    }
+}
+
+/* Extra large desktop */
+@media screen and (min-width: 1400px) {
+    article.node--type-article .article-with-sidebar .field--name-body {
+        flex: 0 1 66%;
+        margin: 0 0 0 auto;
+        max-width: 880px;
+        padding: 0 12px 0 0;
+        width: 66%;
+    }
+    
+    article.node--type-article .article-with-sidebar .field--name-field-webform {
+        flex: 0 1 34%;
+        margin: 0 auto 0 0;
+        max-width: 440px;
+        padding: 0 12px;
+        width: 34%;
+    }
+}

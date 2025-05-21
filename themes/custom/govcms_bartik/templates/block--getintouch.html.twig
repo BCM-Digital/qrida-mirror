@@ -1,0 +1,19 @@
+<!-- block__getintouch.html.twig -->
+<div class="paragraph paragraph-text-buttons">
+  <div class="container">
+    <div class="text-buttons-wrapper bg-white">
+      <div class="row flex-row align-items-center">
+        <div class="col-lg">
+          {{ content['#block_content'].body.value | raw }}
+        </div>
+
+        <div class="col-12 col-lg-4 offset-xl-1">
+          {% for item in content.field_contact_us__links['#items'] %}
+            <a class="btn {% for class in item.options.attributes.class %} {{ class }} {% endfor %}" href="{{ item.url }}" title="{{ item.title }}" target="{{ item.options.attributes.target }}">{{ item.title }}</a>
+            <div class="w-100"></div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

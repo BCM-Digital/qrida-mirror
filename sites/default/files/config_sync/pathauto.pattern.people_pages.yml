@@ -1,0 +1,22 @@
+uuid: 0e7d2281-151d-4eb3-a36c-c459a9a71e6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: people_pages
+label: 'People pages'
+type: 'canonical_entities:node'
+pattern: '[node:field_profile_role]/[node:title]'
+selection_criteria:
+  96f01a9d-9b50-4bde-9d31-c20ce9e833a9:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 96f01a9d-9b50-4bde-9d31-c20ce9e833a9
+    context_mapping:
+      node: node
+    bundles:
+      people: people
+selection_logic: and
+weight: -5
+relationships: {  }

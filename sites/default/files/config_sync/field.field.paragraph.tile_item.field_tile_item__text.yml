@@ -1,0 +1,24 @@
+uuid: ca5fb815-02b3-4fbd-8bca-e4f6ab03284b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tile_item__text
+    - paragraphs.paragraphs_type.tile_item
+  module:
+    - text
+id: paragraph.tile_item.field_tile_item__text
+field_name: field_tile_item__text
+entity_type: paragraph
+bundle: tile_item
+label: Text
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p class=\"text-align-center\"><svg class=\"bi bi-check-lg\" fill=\"#A85604\" height=\"30\" viewbox=\"0 0 16 16\" width=\"30\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z\"></path> </svg></p>\r\n\r\n<h5 class=\"text-align-center\">Lorem Ipsum</h5>\r\n\r\n<p class=\"text-align-center\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

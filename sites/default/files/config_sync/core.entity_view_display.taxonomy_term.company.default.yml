@@ -1,0 +1,30 @@
+uuid: 2f03ab31-b846-4df8-81c9-71b12f22ffe3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.company.field_company__website
+    - taxonomy.vocabulary.company
+  module:
+    - text
+id: taxonomy_term.company.default
+targetEntityType: taxonomy_term
+bundle: company
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_company__website:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

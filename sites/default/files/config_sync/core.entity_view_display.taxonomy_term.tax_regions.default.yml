@@ -1,0 +1,29 @@
+uuid: 82dc088e-cd59-4249-a2f6-e0507b28c8f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tax_regions.field_tax_regions__postcode
+    - taxonomy.vocabulary.tax_regions
+  module:
+    - text
+id: taxonomy_term.tax_regions.default
+targetEntityType: taxonomy_term
+bundle: tax_regions
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tax_regions__postcode:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 81c76d28-2611-41a0-bfd0-d5a8065752c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_calculator__text
+    - paragraphs.paragraphs_type.loan_calculator
+  module:
+    - text
+id: paragraph.loan_calculator.field_calculator__text
+field_name: field_calculator__text
+entity_type: paragraph
+bundle: loan_calculator
+label: 'Calculator text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

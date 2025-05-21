@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * GovCMS Bartik theme.
+ *
+ * Have custom alteration over the theme layer.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\webform\WebformSubmissionForm;
+
+function govcms_bartik_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
+  $form['keys']['#attributes']['placeholder'] = t('What are you looking for?');
+}
+
+function preprocess_hook(&$variables) {
+  $variables['base_path'] = base_path();
+}
+
+function govcms_bartik_form_alter(array &$form, FormStateInterface $form_state)
+{
+  $formObject = $form_state->getFormObject();
+
+  if ($formObject instanceof WebformSubmissionForm) {
+
+    $webform = $formObject->getWebform();
+
+    $form['title'] = [
+      '#weight' => -1,
+      '#markup' => $webform->get('title'),
+      '#prefix' => '<div class="webform-title">',
+      '#suffix' => '</div>',
+    ];
+  }
+}

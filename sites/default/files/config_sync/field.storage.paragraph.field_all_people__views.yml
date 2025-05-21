@@ -1,0 +1,36 @@
+uuid: 3ce70b90-474c-4178-85f5-e67bd98c915d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_all_people__views
+field_name: field_all_people__views
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: all_people_embed
+      label: 'All people cards'
+    -
+      value: embed_all_people
+      label: 'All people list'
+    -
+      value: embed_all_mediators
+      label: 'All mediators list'
+    -
+      value: embed_all_advisers
+      label: 'All advisers list'
+    -
+      value: embed_all_managers
+      label: 'All managers list'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

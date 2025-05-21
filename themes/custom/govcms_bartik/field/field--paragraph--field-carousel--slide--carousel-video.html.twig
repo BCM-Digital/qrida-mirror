@@ -1,0 +1,18 @@
+<!-- field__paragraph__field-carousel__slide__carousel_video.html.twig -->
+{% for item in items %}
+  <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}" data-bs-id="{{ item.content['#paragraph'].id.value }}" data-bs-interval="{{ item.content['#paragraph'].field_carousel__duration.value }}">
+    <div class="row align-items-center">
+      <div class="col-lg">
+        <figure class="iframe-wrapper ratio ratio-16x9">
+          {{ item.content['#paragraph'].field_carousel__iframe.value | raw }}
+        </figure>
+      </div>
+
+      <div class="col-lg">
+        <a href="{{ item.content['#paragraph'].field_carousel__link.value }}" title="link to slide" class="caption">
+          {{ item.content['#paragraph'].field_carousel__text.value | raw }}
+        </a>
+      </div>
+    </div>
+  </div>
+{% endfor %}

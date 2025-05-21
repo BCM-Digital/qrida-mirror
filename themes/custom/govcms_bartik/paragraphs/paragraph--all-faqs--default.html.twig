@@ -1,0 +1,22 @@
+<!-- paragraph__all_faqs___default -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-all-faqs" id="block-views-block-all-faqs-block-faqs-program">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="faqs-wrapper">
+              {% if content.field_all_faqs__text[0] %}
+                {{ content.field_all_faqs__text[0]['#text'] | raw }}
+              {% else %}
+                <h2 class="text-center">All QRIDA FAQs</h2>
+              {% endif %}
+
+              {{ drupal_view('all_faqs', ''~content.field_all_faqs__views['#items'].value~'') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

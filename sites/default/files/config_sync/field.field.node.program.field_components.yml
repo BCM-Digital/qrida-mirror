@@ -1,0 +1,134 @@
+uuid: 5153c2ff-8dfc-4e4b-953b-e54b722eeb65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.program
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.all_people
+    - paragraphs.paragraphs_type.countdown_timer
+    - paragraphs.paragraphs_type.faqs
+    - paragraphs.paragraphs_type.image_and_text
+    - paragraphs.paragraphs_type.intro
+    - paragraphs.paragraphs_type.tabs
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_and_cards
+    - paragraphs.paragraphs_type.text_and_info
+    - paragraphs.paragraphs_type.text_buttons
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - entity_reference_revisions
+id: node.program.field_components
+field_name: field_components
+entity_type: node
+bundle: program
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion: accordion
+      image_and_text: image_and_text
+      intro: intro
+      tabs: tabs
+      text: text
+      all_people: all_people
+      text_and_cards: text_and_cards
+      text_and_info: text_and_info
+      text_buttons: text_buttons
+      faqs: faqs
+      countdown_timer: countdown_timer
+      tiles: tiles
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 14
+        enabled: true
+      accordion_item:
+        weight: 15
+        enabled: false
+      all_disasters:
+        weight: 22
+        enabled: false
+      all_events:
+        weight: 25
+        enabled: false
+      all_faqs:
+        weight: 23
+        enabled: false
+      all_people:
+        weight: 24
+        enabled: true
+      all_programs:
+        weight: 25
+        enabled: false
+      carousel_hero:
+        weight: 36
+        enabled: false
+      carousel_image:
+        weight: 37
+        enabled: false
+      carousel_slide:
+        weight: 16
+        enabled: false
+      carousel_video:
+        weight: 17
+        enabled: false
+      countdown_timer:
+        weight: 40
+        enabled: true
+      faqs:
+        weight: 29
+        enabled: true
+      icon_button:
+        weight: 18
+        enabled: false
+      image_and_text:
+        weight: 19
+        enabled: true
+      intro:
+        weight: 20
+        enabled: true
+      loan_calculator:
+        weight: 31
+        enabled: false
+      modal:
+        weight: 46
+        enabled: false
+      modal_item:
+        weight: 47
+        enabled: false
+      tab_item:
+        weight: 22
+        enabled: false
+      tabs:
+        weight: 21
+        enabled: true
+      text:
+        weight: 23
+        enabled: true
+      text_and_cards:
+        weight: 24
+        enabled: true
+      text_and_info:
+        weight: 26
+        enabled: true
+      text_and_search:
+        weight: 25
+        enabled: false
+      text_buttons:
+        weight: 26
+        enabled: true
+      tile_item:
+        weight: 46
+        enabled: false
+      tiles:
+        weight: 45
+        enabled: true
+field_type: entity_reference_revisions

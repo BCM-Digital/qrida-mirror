@@ -1,0 +1,30 @@
+uuid: 440d5d83-1a45-4974-bf7e-1846a7ecce82
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_and_cards
+    - field.field.block_content.text_and_cards.body
+    - field.field.block_content.text_and_cards.field_text_cards__cards
+  module:
+    - text
+id: block_content.text_and_cards.default
+targetEntityType: block_content
+bundle: text_and_cards
+mode: default
+content:
+  body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text_cards__cards:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

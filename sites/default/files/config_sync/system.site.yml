@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: en
+uuid: f00a8eaf-1fb4-4ba5-9f13-25c846f65a2f
+name: 'Queensland Rural and Industry Development Authority'
+mail: noreply@qrida.qld.gov.au
+slogan: 'Delivering financial assistance for rural and regional communities'
+page:
+  403: ''
+  404: /node/58
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

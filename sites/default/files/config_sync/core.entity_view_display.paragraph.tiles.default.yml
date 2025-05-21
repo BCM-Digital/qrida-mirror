@@ -1,0 +1,52 @@
+uuid: 22f977dd-1ca4-4740-99c8-598cddc388fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tiles.field_tiles__background_color
+    - field.field.paragraph.tiles.field_tiles__last_tile
+    - field.field.paragraph.tiles.field_tiles__text
+    - field.field.paragraph.tiles.field_tiles__tile_item
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.tiles.default
+targetEntityType: paragraph
+bundle: tiles
+mode: default
+content:
+  field_tiles__background_color:
+    type: boolean
+    label: visually_hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tiles__last_tile:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tiles__text:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tiles__tile_item:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

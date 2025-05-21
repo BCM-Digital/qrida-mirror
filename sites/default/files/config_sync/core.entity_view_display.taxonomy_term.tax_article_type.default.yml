@@ -1,0 +1,29 @@
+uuid: 05cbec83-cb3c-4012-92b1-45b6deef7696
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tax_article_type.field_tax__icon
+    - taxonomy.vocabulary.tax_article_type
+  module:
+    - text
+id: taxonomy_term.tax_article_type.default
+targetEntityType: taxonomy_term
+bundle: tax_article_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tax__icon:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

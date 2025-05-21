@@ -1,0 +1,68 @@
+.qrida-countdown {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.qrida-countdown .is-countdown {
+  border: 0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px -10px black;
+  background-color: transparent;
+}
+
+.qrida-countdown .countdown-row span.countdown-section
+{
+  min-width: 6rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.qrida-countdown .countdown-row span.countdown-section:last-child {
+  margin-right: 0;
+}
+
+.qrida-countdown .countdown-row .countdown-amount {
+  font-size: 2.25rem;
+}
+
+.qrida-countdown .countdown-row .countdown-period {
+  font-size: 1rem;
+}
+
+.qrida-countdown .countdown-date-end {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.qrida-countdown .countdown-date-end strong {
+  margin-right: 1rem;
+}
+
+.qrida-countdown .countdown-message {
+  margin-top: 1rem;
+}
+
+.qrida-countdown-dark h2 {
+  color: var(--orange);
+}
+
+.qrida-countdown-dark .countdown-row span.countdown-section {
+  background: var(--headerBgColor);
+}
+
+.qrida-countdown-dark .countdown-date-end {
+  color: var(--orange);
+}
+
+.qrida-countdown-light h2 {
+  color: var(--textColor);
+}
+
+.qrida-countdown-light .countdown-row span.countdown-section {
+  background: var(--orange);
+}

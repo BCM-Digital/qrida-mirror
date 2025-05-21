@@ -1,0 +1,24 @@
+uuid: 5b0aaafc-78d0-4bd6-9493-0a09d0505d3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tiles__text
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - text
+id: paragraph.tiles.field_tiles__text
+field_name: field_tiles__text
+entity_type: paragraph
+bundle: tiles
+label: Text
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<h4 class=\"text-align-center\" style=\"color: #A85604;\">Lorem ipsum</h4>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

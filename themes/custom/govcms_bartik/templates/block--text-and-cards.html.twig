@@ -1,0 +1,22 @@
+<!-- block__text_and_cards.html.twig -->
+<div class="paragraph paragraph-text-cards" style="background-image: linear-gradient(90deg, rgba(48, 114, 177, 0.6) 0%, rgba(170, 122, 50, 1) 100%), url('/themes/custom/govcms_bartik/assets/images/QLD_Map_QRIDA_2.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{ content.body[0]['#text'] | raw }}
+      </div>
+    </div>
+
+    {% if content.field_text_cards__cards['#items'] %}
+      <div class="row justify-content-center mt-5">
+        {% for item in content.field_text_cards__cards['#items'] %}
+          <div class="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div class="card">
+              {{ item.value | raw }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>

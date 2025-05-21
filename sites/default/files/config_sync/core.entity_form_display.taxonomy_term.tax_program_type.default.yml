@@ -1,0 +1,45 @@
+uuid: 608ff012-09bf-4e4d-b981-679fb163c3c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tax_program_type.field_tax__icon
+    - taxonomy.vocabulary.tax_program_type
+  module:
+    - path
+id: taxonomy_term.tax_program_type.default
+targetEntityType: taxonomy_term
+bundle: tax_program_type
+mode: default
+content:
+  field_tax__icon:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true

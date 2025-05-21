@@ -1,0 +1,32 @@
+uuid: 5a83c8e6-7c1c-4258-a1fb-fd087506e4eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.all_people.field_all_people__text
+    - field.field.paragraph.all_people.field_all_people__views
+    - paragraphs.paragraphs_type.all_people
+  module:
+    - text
+id: paragraph.all_people.default
+targetEntityType: paragraph
+bundle: all_people
+mode: default
+content:
+  field_all_people__text:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_all_people__views:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,28 @@
+<!-- /templates/block__alerts.html.twig -->
+{{ attach_library('govcms_bartik/font-awesome') }}
+{% set alert_type = content.field_alerts__alert_type[0]['#markup']|trim %}
+{% if alert_type == 'alert-success' %}
+	{% set icon = '<i class="fa fa-check-circle" aria-hidden="true"></i>' %}
+{% elseif alert_type == 'alert-warning' %}
+	{% set icon = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>' %}
+{% elseif alert_type == 'alert-danger' %}
+	{% set icon = '<i class="fa fa-times-circle" aria-hidden="true"></i>' %}
+{% elseif alert_type == 'alert-info' %}
+	{% set icon = '<i class="fa fa-info-circle" aria-hidden="true"></i>' %}
+{% else %}
+	{% set icon = '' %}
+{% endif %}
+<div class="alert {{ alert_type }} m-0" role="alert">
+  <div class="container">
+    <div class="d-flex align-items-center">
+      <div class="me-3">
+        <span class="fs-3">{{ icon | raw }}</span>
+      </div>
+      <div>
+        <div class="alert-msg">
+          {{ content.body[0]['#text'] | raw }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+uuid: e817b3ad-6ed7-4101-b44a-e670ea349b61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_operating_regions
+field_name: field_operating_regions
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,50 @@
+uuid: 1dd118b9-3c13-4680-94e9-b157554e5320
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field__text
+    - field.field.paragraph.text.field_text__border
+    - field.field.paragraph.text.field_text__form
+    - field.field.paragraph.text.field_text__sidebar
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+    - webform
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field__text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_text__border:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_text__form:
+    type: webform_entity_reference_select
+    weight: 3
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  field_text__sidebar:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

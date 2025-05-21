@@ -1,0 +1,9 @@
+uuid: 8d64d209-463b-45e4-bea8-c8283cc9a6d8
+langcode: en
+status: true
+dependencies: {  }
+name: Regions
+vid: tax_regions
+description: 'Used for People, FAQ, Article and Program CPTs'
+weight: 0
+new_revision: false

@@ -1,0 +1,21 @@
+uuid: 2e38b652-c2c4-4bb0-9400-efe22b8f3bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_all_disasters__text
+    - paragraphs.paragraphs_type.all_disasters
+  module:
+    - text
+id: paragraph.all_disasters.field_all_disasters__text
+field_name: field_all_disasters__text
+entity_type: paragraph
+bundle: all_disasters
+label: Text
+description: 'Text appears above list of Disaster entries.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

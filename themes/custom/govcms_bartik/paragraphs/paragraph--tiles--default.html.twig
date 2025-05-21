@@ -1,0 +1,32 @@
+<!-- paragraph__tiles__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-tiles {{ content.field_tiles__background_color['#items'].value ? 'gray' : 'none' }}">
+      {% if content.field_tiles__text %}
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              {{ content.field_tiles__text }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="container">
+        <div class="row g-0">
+          <div class="col {% if content.field_tiles__last_tile[0] %}col-two{% else %}col-three{% endif %}">
+            {{ content.field_tiles__tile_item }}
+          </div>
+
+          {% if content.field_tiles__last_tile[0] %}
+            <div class="col-lg-4">
+              <div class="card p-3 p-xl-4 p-xxl-5">
+                {{ content.field_tiles__last_tile }}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

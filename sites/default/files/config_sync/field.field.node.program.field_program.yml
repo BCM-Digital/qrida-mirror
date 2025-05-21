@@ -1,0 +1,29 @@
+uuid: 01087277-9620-4e09-97a8-0f7cf65d800a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program
+    - node.type.program
+    - taxonomy.vocabulary.tax_program_type
+id: node.program.field_program
+field_name: field_program
+entity_type: node
+bundle: program
+label: Program
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tax_program_type: tax_program_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

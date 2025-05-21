@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-light py-3">
+  <div class="container d-block">
+    <div class="row">
+      <div class="col-12 text-center">
+        <a class="d-block d-md-inline-block btn btn-primary m-2 my-xl-0 mx-xl-2" href="{{ url('<front>')|render ~ 'node/' ~ node.nid[0].value ~ '/edit' }}" target="_self">Edit</a>
+        <a class="d-block d-md-inline-block btn btn-primary m-2 my-xl-0 mx-xl-2" href="{{ url('<front>')|render ~ 'node/' ~ node.nid[0].value ~ '/revisions' }}" target="_self">Revisions</a>
+        <a class="d-block d-md-inline-block btn btn-primary m-2 my-xl-0 mx-xl-2" href="{{ url('<front>')|render ~ 'node/' ~ node.nid[0].value ~ '/scheduled-transitions' }}" target="_self">Transitions</a>
+        <a class="d-block d-md-inline-block btn btn-danger m-2 my-xl-0 mx-xl-2" href="{{ url('<front>')|render ~ 'node/' ~ node.nid[0].value ~ '/delete' }}" target="_self">Delete</a>
+      </div>
+    </div>
+  </div>
+</nav>

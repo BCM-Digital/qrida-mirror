@@ -1,0 +1,40 @@
+.paragraph-text-cards {
+  /* background-blend-mode: soft-light; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+.paragraph-text-cards a {
+  border-bottom: solid 1px currentColor;
+  color: currentColor;
+}
+.paragraph-text-cards .card {
+  border: none;
+  border-radius: 10px;
+  color: var(--textColor);
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.12s ease-in-out 0s;
+}
+.paragraph-text-cards .card h1,
+.paragraph-text-cards .card h2,
+.paragraph-text-cards .card h3,
+.paragraph-text-cards .card h4,
+.paragraph-text-cards .card h5,
+.paragraph-text-cards .card h6 {
+  color: var(--orange);
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+}
+/* Extra large desktop */
+@media screen and (min-width: 1920px) {
+}
+@media (pointer: fine) {
+  .paragraph-text-cards a:hover,
+  .paragraph-text-cards a:focus {
+    border-bottom: none;
+  }
+}

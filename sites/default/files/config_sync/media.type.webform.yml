@@ -1,0 +1,15 @@
+uuid: 0a0f938a-0fcc-43ae-8fca-f94241ac4b7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform_media
+id: webform
+label: Webform
+description: 'A locally hosted form.'
+source: webform_media
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_webform_media
+field_map: {  }

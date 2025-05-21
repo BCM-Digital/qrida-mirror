@@ -1,0 +1,88 @@
+.view-filters {
+  margin-bottom: 2rem;
+}
+.view-filters label {
+  /* display: none; */
+  margin: 0 0 0.5rem;
+}
+#views-exposed-form-recent-news-block-recent-news label {
+  display: none;
+}
+.view-filters .form--inline {
+  display: flex;
+  flex-direction: column;
+}
+.view-filters .form--inline .form-item {
+  float: none;
+  margin: 0 0 2rem 0;
+}
+.view-filters .form-actions {
+  padding: 0;
+  margin: 0;
+}
+#views-exposed-form-all-people-block-all-people input[type="text"],
+#views-exposed-form-all-people-all-people-embed input[type="text"] {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-radius: 8px;
+  margin: 0;
+}
+#views-exposed-form-all-people-block-all-people label,
+#views-exposed-form-all-people-all-people-embed label {
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .view-filters .form--inline {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+  }
+  .view-filters .form--inline .form-item {
+    margin: 0 1rem 0 0;
+  }
+  .view-filters .form-actions {
+    margin: 0;
+  }
+  #views-exposed-form-all-people-block-all-people .form--inline,
+  #views-exposed-form-all-people-all-people-embed .form--inline {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+  }
+  #views-exposed-form-all-people-block-all-people .form--inline .form-item,
+  #views-exposed-form-all-people-all-people-embed .form--inline .form-item {
+    /* flex: 0 1 50%; */
+    margin: 0 1rem 0 0;
+    /* max-width: 50%; */
+  }
+  #views-exposed-form-all-people-block-all-people .form--inline .form-actions,
+  #views-exposed-form-all-people-all-people-embed .form--inline .form-actions {
+    flex: 0 1 100%;
+    margin: 1rem 0 0 0;
+    max-width: 100%;
+  }
+  #views-exposed-form-all-people-block-all-people input[type="text"],
+  #views-exposed-form-all-people-all-people-embed input[type="text"] {
+    max-width: 200px;
+  }
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+  #views-exposed-form-all-people-block-all-people .form--inline .form-item,
+  #views-exposed-form-all-people-all-people-embed .form--inline .form-item {
+    flex: 0 1 auto;
+    margin: 0.5rem 1rem 0 0;
+    max-width: none;
+  }
+  #views-exposed-form-all-people-block-all-people .form--inline .form-actions,
+  #views-exposed-form-all-people-all-people-embed .form--inline .form-actions {
+    flex: 0 1 auto;
+    margin: 0.5rem 0 0 0;
+    max-width: none;
+  }
+}
+/* Extra large desktop */
+@media screen and (min-width: 1920px) {
+}

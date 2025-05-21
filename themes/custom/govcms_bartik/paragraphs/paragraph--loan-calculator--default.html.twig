@@ -1,0 +1,133 @@
+<!-- paragraph__loan_calculator__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-calculator">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-10">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="card calculator-wrapper">
+              <form class="card-body calculator-inputs" action="#">
+                <div class="calculator-field field-amount">
+                  <label class="field-label">Loan amount</label>
+                  <input class="field-amount-input text-center" id="amount_value" type="number" pattern="-?[0-9]*(\.[0-9]+)?" value="0" tabindex="1">
+                  <input class="field-amount-slider" id="amount_slider" type="range" min="0" max="500000" value="0" step="1000" tabindex="4">
+                  <label class="field-sublabel">Enter amount</label>
+                </div>
+
+                <div class="calculator-field field-repayment">
+                  <label class="field-label">Years</label>
+                  <input class="field-repayment-value text-center" id="repayment_value" type="number" value="6" step="0.1" tabindex="2">
+                  <input class="field-repayment-slider" id="repayment_slider" type="range" min="1" max="30" value="6" step="0.1" tabindex="5">
+                  <label class="field-sublabel">Select loan period</label>
+                </div>
+
+                <div class="calculator-field field-interest">
+                  <label class="field-label">Interest rate</label>
+                  <input class="field-interest-value text-center" id="interest_value" type="number" value="2.5" step="0.01" tabindex="3">
+                  <input class="field-interest-slider" id="interest_slider" type="range" min="0.1" max="10" value="2.5" step="0.01" tabindex="6">
+                  <label class="field-sublabel">Select interest rate</label>
+                </div>
+              </form>
+
+              <div class="card-footer calculator-results">
+                <h3 class="text-center m-0 calculator-header">Results</h3>
+
+                <div class="calculator-result">
+                  <p class="m-0">Monthly repayment:</p>
+                  <p class="fs-4" id="installment_monthly">$ 0.00</p>
+                </div>
+
+                <div class="calculator-result">
+                  <p class="m-0">Quarterly repayment:</p>
+                  <p class="fs-4" id="installment_quarterly">$ 0.00</p>
+                </div>
+
+                <div class="calculator-result">
+                  <p class="m-0">Half yearly repayment:</p>
+                  <p class="fs-4" id="installment_biyearly">$ 0.00</p>
+                </div>
+
+                <div class="calculator-result">
+                  <p class="m-0">Yearly repayment:</p>
+                  <p class="fs-4" id="installment_yearly">$ 0.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    $(document).ready(function () {
+      var calc_loan = function() {
+        var value_monthly = 0;
+        var value_quarterly = 0;
+        var value_half = 0;
+        var value_yearly = 0;
+
+        var n = $('#repayment_slider').val() * 12;
+        var r = ($('#interest_slider').val() / 100) / 12;
+        var R = Math.pow(r + 1, n);
+        var P = $('#amount_value').val();
+
+        value_monthly = (P) * ((r * (R)) / (R - 1));
+        value_quarterly = (value_monthly * 3);
+        value_biyearly = (value_monthly * 6);
+        value_yearly = (value_monthly * 12);
+
+        $('#installment_monthly').text("$ " + value_monthly.toFixed(2));
+        $('#installment_quarterly').text("$ " + value_quarterly.toFixed(2));
+        $('#installment_biyearly').text("$ " + value_biyearly.toFixed(2));
+        $('#installment_yearly').text("$ " + value_yearly.toFixed(2));
+      }
+      $('#amount_value').val($('#amount_slider').val());
+      $('#repayment_value').val($('#repayment_slider').val());
+      $('#interest_value').val($('#interest_slider').val());
+
+      $('#amount_value').change(function(event) {
+        calc_loan();
+      });
+
+      $('#amount_value').change(function(event) {
+        $('#amount_slider').val($('#amount_value').val());
+        calc_loan();
+      });
+
+      $('#amount_slider').change(function(event) {
+        $('#amount_value').val($('#amount_slider').val());
+        calc_loan();
+      });
+
+      $('#repayment_value').change(function(event) {
+        $('#repayment_slider').val($('#repayment_value').val());
+        calc_loan();
+      });
+
+      $('#repayment_slider').change(function(event) {
+        $('#repayment_value').val($('#repayment_slider').val());
+        calc_loan();
+      });
+
+      $('#interest_value').change(function(event) {
+        $('#interest_slider').val($('#interest_value').val())
+        calc_loan();
+      });
+
+      $('#interest_slider').change(function(event) {
+        $('#interest_value').val($('#interest_slider').val());
+        calc_loan();
+      });
+    });
+    </script>
+  {% endblock %}
+{% endblock %}

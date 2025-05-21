@@ -1,0 +1,21 @@
+uuid: d9634776-7f80-4002-94bc-c816862387ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_all_faqs__views
+    - paragraphs.paragraphs_type.all_faqs
+  module:
+    - options
+id: paragraph.all_faqs.field_all_faqs__views
+field_name: field_all_faqs__views
+entity_type: paragraph
+bundle: all_faqs
+label: Views
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

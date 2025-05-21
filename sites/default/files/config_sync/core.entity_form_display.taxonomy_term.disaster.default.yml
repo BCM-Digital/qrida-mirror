@@ -1,0 +1,23 @@
+uuid: 479ad6ff-6bd4-4283-9073-e4a71502f22e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.disaster
+id: taxonomy_term.disaster.default
+targetEntityType: taxonomy_term
+bundle: disaster
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

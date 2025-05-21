@@ -1,0 +1,21 @@
+uuid: 65e1e718-b938-4736-b240-dfcb1d31e289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tiles__last_tile
+    - paragraphs.paragraphs_type.tiles
+  module:
+    - text
+id: paragraph.tiles.field_tiles__last_tile
+field_name: field_tiles__last_tile
+entity_type: paragraph
+bundle: tiles
+label: 'Last tile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

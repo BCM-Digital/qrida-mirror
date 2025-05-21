@@ -1,0 +1,36 @@
+<!-- /paragraphs/paragraph__text_and_info__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-text-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl">
+            {{ content.field_text_info__text[0]['#text'] | raw }}
+          </div>
+
+          <div class="col-xl-3 offset-xl-1 mt-5 mt-xl-0">
+
+            {% if content.field_text_info__info['#items'] or content.field_text_info__details['#items'] %}
+              <h4 class="text-dark">Related information</h4>
+            {% endif %}
+
+            {% for item in content.field_text_info__info['#items'] %}
+              <span class="info-link">
+                <a href="{{ item.url }}" target="{{ item.options.attributes.target }}" title="{{ item.title }}">{{ item.title }}</a>
+              </span>
+            {% endfor %}
+
+            {% for item in content.field_text_info__details['#items'] %}
+              <div class="details">
+                {{ item.value | raw }}
+              </div>
+            {% endfor %}
+
+              {{ content.field_text__form }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

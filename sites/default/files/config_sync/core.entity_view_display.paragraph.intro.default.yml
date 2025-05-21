@@ -1,0 +1,43 @@
+uuid: 46b59f15-a606-49bf-80cc-c91b2402cbdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro.field_intro__buttons
+    - field.field.paragraph.intro.field_intro__image
+    - field.field.paragraph.intro.field_intro__title
+    - paragraphs.paragraphs_type.intro
+  module:
+    - entity_reference_revisions
+id: paragraph.intro.default
+targetEntityType: paragraph
+bundle: intro
+mode: default
+content:
+  field_intro__buttons:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_intro__image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_intro__title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

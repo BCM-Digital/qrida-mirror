@@ -1,0 +1,29 @@
+uuid: d19654e3-bd2c-428f-b738-018bb84cbf05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faqs__faq_item
+    - node.type.faq
+    - paragraphs.paragraphs_type.faqs
+id: paragraph.faqs.field_faqs__faq_item
+field_name: field_faqs__faq_item
+entity_type: paragraph
+bundle: faqs
+label: 'FAQ item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faq: faq
+    sort:
+      field: title
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

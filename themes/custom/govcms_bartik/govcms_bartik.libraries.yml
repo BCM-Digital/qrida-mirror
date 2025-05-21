@@ -1,0 +1,67 @@
+# GovCMS Bartik styling.
+govcms-bartik-styling:
+  css:
+    theme:
+      # css/govcms-bartik.theme.style.css: {}
+      css/reset.css: {}
+      css/animations.css: {}
+      css/variables.css: {}
+      css/global.css: {}
+      css/typography.css: {}
+      css/buttons.css: {}
+      css/forms.css: {}
+      css/tables.css: {}
+      css/bootstrap/accordion.css: {}
+      css/bootstrap/alert.css: {}
+      css/bootstrap/card.css: {}
+      css/bootstrap/carousel.css: {}
+      css/bootstrap/tabs.css: {}
+      css/parts/accessibility-modal.css: {}
+      css/parts/breadcrumbs.css: {}
+      css/parts/top-header.css: {}
+      css/parts/header.css: {}
+      css/parts/updated-date.css: {}
+      css/parts/footer-top.css: {}
+      css/parts/footer-middle.css: {}
+      css/parts/footer-bottom.css: {}
+      css/parts/filters.css: {}
+      css/parts/messages.css: {}
+      css/parts/pager.css: {}
+      css/paragraphs/paragraph-calculator.css: {}
+      css/paragraphs/paragraph-carousel-image.css: {}
+      css/paragraphs/paragraph-carousel-video.css: {}
+      css/paragraphs/paragraph-image-text.css: {}
+      css/paragraphs/paragraph-intro.css: {}
+      css/paragraphs/paragraph-modal.css: {}
+      css/paragraphs/paragraph-people-list.css: {}
+      css/paragraphs/paragraph-tabs.css: {}
+      css/paragraphs/paragraph-text-buttons.css: {}
+      css/paragraphs/paragraph-text-cards.css: {}
+      css/paragraphs/paragraph-text-info.css: {}
+      css/paragraphs/paragraph-text-search.css: {}
+      css/paragraphs/paragraph-text.css: {}
+      css/paragraphs/paragraph-tiles.css: {}
+      css/paragraphs/paragraph-countdown.css: {}
+      css/field/field-cpt.css: {}
+      css/field/field-entity-reference.css: {}
+      css/field/field-map.css: {}
+      css/field/field-name-body.css: {}
+      css/templates/article.css: {}
+      css/templates/homepage.css: {}
+      css/templates/news.css: {}
+      css/templates/search.css: {}
+      css/templates/taxonomy-term-archive.css: {}
+      css/blocks/block-general.css: {}
+      css/blocks/block-all-disasters.css: {}
+      css/blocks/block-all-faqs.css: {}
+      css/blocks/block-all-news.css: {}
+      css/blocks/block-all-events.css: {}
+      css/blocks/block-all-people.css: {}
+      css/blocks/block-all-programs.css: {}
+      css/blocks/block-recent-news.css: {}
+      css/theme-port.css: {}
+
+font-awesome:
+  css:
+    theme:
+      css/fontawesome.css: {}

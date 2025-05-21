@@ -1,0 +1,38 @@
+uuid: e1424d41-1434-4b18-8d15-cadfb228966b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_and_cards:1b531eb2-c1de-4d35-b56c-d60cc08ca710'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - govcms_bartik
+id: text_and_cards
+theme: govcms_bartik
+region: footer_top
+weight: -6
+provider: null
+plugin: 'block_content:1b531eb2-c1de-4d35-b56c-d60cc08ca710'
+settings:
+  id: 'block_content:1b531eb2-c1de-4d35-b56c-d60cc08ca710'
+  label: "We're doing more for regional Queensland"
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/access-information\r\n/customer-complaints\r\n/public-interest-disclosure-statement\r\n/primary-producers\r\n/business\r\n/non-profit-organisations\r\n/drought-support\r\n/farm-debt-services\r\n/queensland-rural-debt-survey\r\n/calculators\r\n/interest-rate\r\n/tools-resources/forms-downloads\r\n/rainfall-chart\r\n/loan-review\r\n/reviewing-decision\r\n/tools-resources/faqs\r\n/information-farmers\r\n/information-mortgagees\r\n/information-advisors-and-agents\r\n/information-mediators\r\n/copyright\r\n/disclaimer\r\n/privacy\r\n/right-information\r\n/accessibility\r\n/contact-us"

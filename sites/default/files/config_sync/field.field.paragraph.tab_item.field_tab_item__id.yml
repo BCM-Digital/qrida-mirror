@@ -1,0 +1,19 @@
+uuid: a600c4c1-1170-4061-b597-d54c29837a8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_item__id
+    - paragraphs.paragraphs_type.tab_item
+id: paragraph.tab_item.field_tab_item__id
+field_name: field_tab_item__id
+entity_type: paragraph
+bundle: tab_item
+label: ID
+description: 'A unique <b>ID</b> for each <b>Tab</b>. Should be a single word.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

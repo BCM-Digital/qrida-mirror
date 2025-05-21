@@ -1,0 +1,32 @@
+uuid: 9aed2389-6895-4966-bbb3-d69562d6d630
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.webform.field_media_webform_media
+    - image.style.medium
+    - media.type.webform
+  module:
+    - image
+id: media.webform.media_library
+targetEntityType: media
+bundle: webform
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_webform_media: true
+  name: true
+  uid: true

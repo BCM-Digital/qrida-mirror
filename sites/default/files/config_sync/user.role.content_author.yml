@@ -1,0 +1,300 @@
+uuid: 02210b27-84e5-4cd7-ab04-1a6e94b96f1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - media.type.webform
+    - node.type.article
+    - node.type.event
+    - node.type.faq
+    - node.type.page
+    - node.type.people
+    - node.type.program
+    - taxonomy.vocabulary.areas_of_experience
+    - taxonomy.vocabulary.company
+    - taxonomy.vocabulary.disaster
+    - taxonomy.vocabulary.industry
+    - taxonomy.vocabulary.operating_regions
+    - taxonomy.vocabulary.postcodes
+    - taxonomy.vocabulary.profession
+    - taxonomy.vocabulary.profile_role
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.tax_article_type
+    - taxonomy.vocabulary.tax_audience
+    - taxonomy.vocabulary.tax_program_type
+    - taxonomy.vocabulary.tax_regions
+    - workflows.workflow.editorial
+  module:
+    - block
+    - block_content
+    - comment
+    - contact
+    - content_moderation
+    - contextual
+    - entity_reference_revisions
+    - entity_usage
+    - field_ui
+    - file
+    - filter
+    - image
+    - media
+    - node
+    - paragraphs
+    - paragraphs_library
+    - paragraphs_type_permissions
+    - path
+    - redirect
+    - scheduled_transitions
+    - search
+    - system
+    - taxonomy
+    - toolbar
+    - webform
+id: content_author
+label: 'Content Author'
+weight: 3
+is_admin: null
+permissions:
+  - 'access any webform configuration'
+  - 'access block library'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access entity usage statistics'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access own webform configuration'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer block_content display'
+  - 'administer blocks'
+  - 'administer comment display'
+  - 'administer contact forms'
+  - 'administer contact_message display'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer media display'
+  - 'administer menu'
+  - 'administer node display'
+  - 'administer paragraph display'
+  - 'administer paragraph fields'
+  - 'administer paragraphs_library_item display'
+  - 'administer redirects'
+  - 'administer site configuration'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'bypass paragraphs type content access'
+  - 'create article content'
+  - 'create audio media'
+  - 'create document media'
+  - 'create event content'
+  - 'create faq content'
+  - 'create image media'
+  - 'create media'
+  - 'create page content'
+  - 'create paragraph content accordion'
+  - 'create paragraph content accordion_item'
+  - 'create paragraph content all_disasters'
+  - 'create paragraph content all_events'
+  - 'create paragraph content all_faqs'
+  - 'create paragraph content all_people'
+  - 'create paragraph content all_programs'
+  - 'create paragraph content carousel_hero'
+  - 'create paragraph content carousel_image'
+  - 'create paragraph content carousel_slide'
+  - 'create paragraph content carousel_video'
+  - 'create paragraph content countdown_timer'
+  - 'create paragraph content faqs'
+  - 'create paragraph content icon_button'
+  - 'create paragraph content image_and_text'
+  - 'create paragraph content intro'
+  - 'create paragraph content loan_calculator'
+  - 'create paragraph content modal'
+  - 'create paragraph content modal_item'
+  - 'create paragraph content tab_item'
+  - 'create paragraph content tabs'
+  - 'create paragraph content text'
+  - 'create paragraph content text_and_cards'
+  - 'create paragraph content text_and_info'
+  - 'create paragraph content text_and_search'
+  - 'create paragraph content text_buttons'
+  - 'create paragraph content tile_item'
+  - 'create paragraph content tiles'
+  - 'create paragraph library item'
+  - 'create people content'
+  - 'create program content'
+  - 'create remote_video media'
+  - 'create terms in areas_of_experience'
+  - 'create terms in company'
+  - 'create terms in disaster'
+  - 'create terms in industry'
+  - 'create terms in operating_regions'
+  - 'create terms in postcodes'
+  - 'create terms in profession'
+  - 'create terms in profile_role'
+  - 'create terms in tags'
+  - 'create terms in tax_article_type'
+  - 'create terms in tax_audience'
+  - 'create terms in tax_program_type'
+  - 'create terms in tax_regions'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create webform'
+  - 'create webform media'
+  - 'delete any media'
+  - 'delete any people content'
+  - 'delete media'
+  - 'delete orphan revisions'
+  - 'delete own article content'
+  - 'delete own event content'
+  - 'delete own faq content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete own people content'
+  - 'delete own program content'
+  - 'delete own webform'
+  - 'delete own webform submission'
+  - 'delete people revisions'
+  - 'edit any article content'
+  - 'edit any event content'
+  - 'edit any faq content'
+  - 'edit any page content'
+  - 'edit any people content'
+  - 'edit any program content'
+  - 'edit any webform'
+  - 'edit any webform submission'
+  - 'edit own article content'
+  - 'edit own event content'
+  - 'edit own faq content'
+  - 'edit own page content'
+  - 'edit own people content'
+  - 'edit own program content'
+  - 'edit own webform'
+  - 'edit own webform submission'
+  - 'edit paragraph library item'
+  - 'edit terms in areas_of_experience'
+  - 'edit terms in company'
+  - 'edit terms in disaster'
+  - 'edit terms in industry'
+  - 'edit terms in operating_regions'
+  - 'edit terms in postcodes'
+  - 'edit terms in profession'
+  - 'edit terms in profile_role'
+  - 'edit terms in tags'
+  - 'edit terms in tax_article_type'
+  - 'edit terms in tax_audience'
+  - 'edit terms in tax_program_type'
+  - 'edit terms in tax_regions'
+  - 'edit webform source'
+  - 'edit webform variants'
+  - 'revert article revisions'
+  - 'revert event revisions'
+  - 'revert faq revisions'
+  - 'revert page revisions'
+  - 'revert people revisions'
+  - 'revert program revisions'
+  - 'search content'
+  - 'update any media'
+  - 'update media'
+  - 'update paragraph content accordion'
+  - 'update paragraph content accordion_item'
+  - 'update paragraph content all_disasters'
+  - 'update paragraph content all_events'
+  - 'update paragraph content all_faqs'
+  - 'update paragraph content all_people'
+  - 'update paragraph content all_programs'
+  - 'update paragraph content carousel_hero'
+  - 'update paragraph content carousel_image'
+  - 'update paragraph content carousel_slide'
+  - 'update paragraph content carousel_video'
+  - 'update paragraph content countdown_timer'
+  - 'update paragraph content faqs'
+  - 'update paragraph content icon_button'
+  - 'update paragraph content image_and_text'
+  - 'update paragraph content intro'
+  - 'update paragraph content loan_calculator'
+  - 'update paragraph content modal'
+  - 'update paragraph content modal_item'
+  - 'update paragraph content tab_item'
+  - 'update paragraph content tabs'
+  - 'update paragraph content text'
+  - 'update paragraph content text_and_cards'
+  - 'update paragraph content text_and_info'
+  - 'update paragraph content text_and_search'
+  - 'update paragraph content text_buttons'
+  - 'update paragraph content tile_item'
+  - 'update paragraph content tiles'
+  - 'use advanced search'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition needs_review'
+  - 'use editorial transition send_back_to_draft'
+  - 'use editorial transition unpublish'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all media revisions'
+  - 'view all scheduled transitions'
+  - 'view any unpublished content'
+  - 'view any webform submission'
+  - 'view article revisions'
+  - 'view event revisions'
+  - 'view faq revisions'
+  - 'view latest version'
+  - 'view own unpublished media'
+  - 'view own webform submission'
+  - 'view page revisions'
+  - 'view paragraph content accordion'
+  - 'view paragraph content accordion_item'
+  - 'view paragraph content all_disasters'
+  - 'view paragraph content all_events'
+  - 'view paragraph content all_faqs'
+  - 'view paragraph content all_people'
+  - 'view paragraph content all_programs'
+  - 'view paragraph content carousel_hero'
+  - 'view paragraph content carousel_image'
+  - 'view paragraph content carousel_slide'
+  - 'view paragraph content carousel_video'
+  - 'view paragraph content countdown_timer'
+  - 'view paragraph content faqs'
+  - 'view paragraph content icon_button'
+  - 'view paragraph content image_and_text'
+  - 'view paragraph content intro'
+  - 'view paragraph content loan_calculator'
+  - 'view paragraph content modal'
+  - 'view paragraph content modal_item'
+  - 'view paragraph content tab_item'
+  - 'view paragraph content tabs'
+  - 'view paragraph content text'
+  - 'view paragraph content text_and_cards'
+  - 'view paragraph content text_and_info'
+  - 'view paragraph content text_and_search'
+  - 'view paragraph content text_buttons'
+  - 'view paragraph content tile_item'
+  - 'view paragraph content tiles'
+  - 'view people revisions'
+  - 'view program revisions'
+  - 'view the administration theme'

@@ -1,0 +1,85 @@
+/* HEADER */
+#header {
+  background-image: none;
+}
+.region-header {
+  color: unset;
+  padding: 0;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-nav {
+  padding: 0;
+}
+.dropdown-toggle::after {
+  content: none;
+  display: none;
+}
+.menu-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN */
+.layout-container {
+  margin: 0;
+  max-width: none;
+}
+.layout-main {
+  margin: 0;
+  padding: 0;
+}
+.main-content .section {
+  padding: 0;
+}
+.node__content {
+  font-size: 1rem;
+  margin: 0;
+}
+h1,
+.heading-a {
+  color: unset;
+  font-size: unset;
+  font-weight: inherit;
+  margin: 0;
+}
+.block .content {
+  margin: 0;
+}
+.main-content h2 {
+  color: currentColor;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 0 0 1em;
+}
+
+/* FORMS */
+.search-form .form-search {
+  color: unset;
+  border: none;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.search-form input[type="submit"] {
+  background: none;
+}
+.container-inline .form-actions,
+.container-inline .form-item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* CAPTION */
+.caption > * {
+  background: unset;
+  border: none;
+  /* display: unset; */
+  padding: 0;
+}
+
+.ck-content .text-orange {
+  color: var(--qridaOrange);
+}

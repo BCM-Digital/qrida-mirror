@@ -1,0 +1,98 @@
+.paragraph-modal .paragraph-modal-buttons .btn {
+  display: block;
+  width: 100%;
+}
+.paragraph-modal .modal,
+.ui-widget-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px) grayscale(1);
+  opacity: 1;
+}
+.paragraph-modal .paragraph-modal-buttons .btn:not(:last-child) {
+  margin: 0 0 1rem 0;
+}
+.paragraph-modal .modal-content,
+.ui-widget.ui-widget-content {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.paragraph-modal .modal-header,
+.ui-dialog .ui-dialog-titlebar {
+  background-color: var(--greyLight);
+  border: none;
+  border-radius: 0;
+  color: var(--qridaOrange);
+  padding: 1rem;
+}
+.paragraph-modal .modal-body,
+.ui-dialog .ui-dialog-content {
+  padding: 1rem;
+}
+.modal-header .btn-close,
+.ui-dialog .ui-dialog-titlebar-close {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23A85604" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  right: 1rem;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  transform: translateY(-50%);
+}
+.paragraph-modal .modal .messages__wrapper {
+  padding: 0;
+}
+.paragraph-modal .modal .messages__wrapper .messages {
+  border-radius: 10px;
+  box-shadow: none !important;
+  margin: 1rem 0;
+}
+.paragraph-modal .modal .messages__wrapper .messages--status {
+  border: solid 1px var(--success) !important;
+}
+.paragraph-modal .modal .messages__wrapper .messages--error {
+  border: solid 1px var(--danger) !important;
+}
+.paragraph-modal .modal .messages__wrapper .messages--warning {
+  border: solid 1px var(--warning) !important;
+}
+.paragraph-modal table tr th {
+  background-color: var(--greyDarker);
+}
+.paragraph-modal table tr {
+  background: none;
+  background-color: var(--greyLight);
+}
+.paragraph-modal table tr.odd {
+  background-color: var(--greyLighter);
+}
+.paragraph-modal table label {
+  font-size: 1rem;;
+}
+.paragraph-modal table .description {
+  font-size: 0.8rem;
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .paragraph-modal .modal-dialog {
+    max-width: 660px;
+  }
+}
+/* Small desktop */
+@media only screen and (min-width: 960px) {
+}
+/* Large desktop */
+@media only screen and (min-width: 1200px) {
+  .paragraph-modal .modal-dialog {
+    max-width: 960px;
+  }
+}
+/* Extra large desktop */
+@media only screen and (min-width: 1400px) {
+}

@@ -1,0 +1,23 @@
+uuid: 2fa58a72-69e3-482b-88df-c5528e497cba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_text__ratio
+    - paragraphs.paragraphs_type.image_and_text
+  module:
+    - options
+id: paragraph.image_and_text.field_image_text__ratio
+field_name: field_image_text__ratio
+entity_type: paragraph
+bundle: image_and_text
+label: 'Aspect ratio'
+description: 'Choose the aspect ratio of your YouTube video. Default is 16x9.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'ratio ratio-16x9'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

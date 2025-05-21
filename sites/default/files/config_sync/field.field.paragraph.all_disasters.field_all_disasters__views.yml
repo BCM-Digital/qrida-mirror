@@ -1,0 +1,21 @@
+uuid: b8dae93b-02dd-4aa9-99ca-3033218a6c03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_all_disasters__views
+    - paragraphs.paragraphs_type.all_disasters
+  module:
+    - options
+id: paragraph.all_disasters.field_all_disasters__views
+field_name: field_all_disasters__views
+entity_type: paragraph
+bundle: all_disasters
+label: Views
+description: 'Select which Disaster entries to show.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

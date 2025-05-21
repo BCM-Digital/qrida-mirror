@@ -1,0 +1,21 @@
+uuid: afe4fe47-a820-4326-af44-94848871417d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_item__pane
+    - paragraphs.paragraphs_type.tab_item
+  module:
+    - text
+id: paragraph.tab_item.field_tab_item__pane
+field_name: field_tab_item__pane
+entity_type: paragraph
+bundle: tab_item
+label: Pane
+description: 'This is the main content of the Tab component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

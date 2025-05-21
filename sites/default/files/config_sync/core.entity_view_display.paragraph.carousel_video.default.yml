@@ -1,0 +1,24 @@
+uuid: 6f25eb7f-89f1-46f2-be30-9a1c4abf875d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_video.field_carousel__slide
+    - paragraphs.paragraphs_type.carousel_video
+  module:
+    - entity_reference_revisions
+id: paragraph.carousel_video.default
+targetEntityType: paragraph
+bundle: carousel_video
+mode: default
+content:
+  field_carousel__slide:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

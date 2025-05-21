@@ -1,0 +1,21 @@
+uuid: ce697132-a531-4180-9907-98b0721b2b01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.people
+  module:
+    - text
+id: node.people.field_address
+field_name: field_address
+entity_type: node
+bundle: people
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

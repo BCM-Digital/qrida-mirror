@@ -1,0 +1,24 @@
+<!-- field__node__field_event__map__event.html.twig -->
+{%
+  set classes = [
+    'my-5',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="event-map">
+          {% for item in items %}
+            {{ item.content['#context'].value | raw }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

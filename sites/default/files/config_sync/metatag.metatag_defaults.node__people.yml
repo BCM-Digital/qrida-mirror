@@ -1,0 +1,11 @@
+uuid: 9cd5b189-d07f-4d92-81c5-2c0d44dc0d9a
+langcode: en
+status: true
+dependencies: {  }
+id: node__people
+label: 'Content: People'
+tags:
+  abstract: '[node:field_profile_details:value]'
+  description: '[node:title] is a [node:field_profile_role:entity:name] for [site:name] [site:slogan].'
+  robots: 'noarchive, nosnippet, noimageindex, notranslate'
+  title: '[node:title] [node:field_profile_role:entity:name] | [site:name]'

@@ -1,0 +1,10 @@
+.card.people-card .tax_term:not(:last-child)::after {
+  content: "\2010";
+  margin-left: 0.25rem;
+}
+/* Medium desktop */
+@media screen and (min-width: 992px) {
+  .card.people-card {
+    animation: fadeIn 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  }
+}

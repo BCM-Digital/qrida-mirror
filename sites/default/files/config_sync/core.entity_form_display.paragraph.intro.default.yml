@@ -1,0 +1,65 @@
+uuid: d66d06d7-14ec-49cb-9957-934ca0111440
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro.field_intro__buttons
+    - field.field.paragraph.intro.field_intro__image
+    - field.field.paragraph.intro.field_intro__title
+    - paragraphs.paragraphs_type.intro
+  module:
+    - field_group
+    - media_library
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_buttons:
+      children:
+        - field_intro__buttons
+      label: BUTTONS
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.intro.default
+targetEntityType: paragraph
+bundle: intro
+mode: default
+content:
+  field_intro__buttons:
+    type: entity_reference_paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+  field_intro__image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_intro__title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

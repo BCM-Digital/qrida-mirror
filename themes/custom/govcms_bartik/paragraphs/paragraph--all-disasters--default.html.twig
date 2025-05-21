@@ -1,0 +1,22 @@
+<!-- paragraph__all_faqs___default -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-all-disasters" id="block-views-block-all-disasters-block-disasters-business">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="disasters-wrapper">
+              {% if content.field_all_disasters__text[0] %}
+                {{ content.field_all_disasters__text[0]['#text'] | raw }}
+              {% else %}
+                <h2 class="text-center">All disaster assistance available</h2>   
+              {% endif %}
+
+              {{ drupal_view('all_disasters', ''~content.field_all_disasters__views['#items'].value~'') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

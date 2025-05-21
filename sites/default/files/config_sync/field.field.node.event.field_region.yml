@@ -1,0 +1,29 @@
+uuid: f9300b6a-620d-4386-a920-d03b040aff41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region
+    - node.type.event
+    - taxonomy.vocabulary.tax_regions
+id: node.event.field_region
+field_name: field_region
+entity_type: node
+bundle: event
+label: Region
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tax_regions: tax_regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,25 @@
+uuid: 508ccfd6-d929-4efe-919c-eedad3f586e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.loan_calculator.field_calculator__text
+    - paragraphs.paragraphs_type.loan_calculator
+  module:
+    - text
+id: paragraph.loan_calculator.default
+targetEntityType: paragraph
+bundle: loan_calculator
+mode: default
+content:
+  field_calculator__text:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

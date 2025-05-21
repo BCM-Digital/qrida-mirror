@@ -1,0 +1,23 @@
+uuid: a83847b6-5d31-49db-a32f-eea814c43b2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_carousel__animation_type
+    - paragraphs.paragraphs_type.carousel_image
+  module:
+    - options
+id: paragraph.carousel_image.field_carousel__animation_type
+field_name: field_carousel__animation_type
+entity_type: paragraph
+bundle: carousel_image
+label: 'Animation type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: carousel-slide
+default_value_callback: ''
+settings: {  }
+field_type: list_string

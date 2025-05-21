@@ -1,0 +1,24 @@
+#block-views-block-all-people-block-all-people > h2 {
+  text-align: center;
+}
+#block-views-block-all-people-block-all-people .paragraph.paragraph-intro {
+  display: none;
+}
+#block-views-block-all-people-block-all-people > h2 {
+  text-align: center;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+/* Medium desktop */
+@media screen and (min-width: 992px) {
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+}
+/* XLarge desktop */
+@media screen and (min-width: 1400px) {
+}
+@media (pointer: fine) {
+}

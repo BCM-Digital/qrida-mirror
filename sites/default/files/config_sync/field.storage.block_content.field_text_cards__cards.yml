@@ -1,0 +1,19 @@
+uuid: 85c17ee1-e306-4773-985c-8af894318203
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_text_cards__cards
+field_name: field_text_cards__cards
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

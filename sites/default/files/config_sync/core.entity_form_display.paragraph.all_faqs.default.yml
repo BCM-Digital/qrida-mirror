@@ -1,0 +1,32 @@
+uuid: e6010e96-285e-401c-bb34-999caa3ffae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.all_faqs.field_all_faqs__text
+    - field.field.paragraph.all_faqs.field_all_faqs__views
+    - paragraphs.paragraphs_type.all_faqs
+  module:
+    - text
+id: paragraph.all_faqs.default
+targetEntityType: paragraph
+bundle: all_faqs
+mode: default
+content:
+  field_all_faqs__text:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_all_faqs__views:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

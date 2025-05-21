@@ -1,0 +1,27 @@
+.paragraph-text h1,
+.paragraph-text h2,
+.paragraph-text h3,
+.paragraph-text h4,
+.paragraph-text h5,
+.paragraph-text h6 {
+  color: var(--orange);
+}
+.paragraph-text-border-top {
+  border-top: solid 1px var(--greyLight);
+}
+.paragraph-text-border-bottom {
+  border-bottom: solid 1px var(--greyLight);
+}
+.paragraph-text-border-top-and-bottom {
+  border-top: solid 1px var(--greyLight);
+  border-bottom: solid 1px var(--greyLight);
+}
+.paragraph-text-webform form.webform-submission-form {
+  margin: 0;
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+}
+/* Extra large desktop */
+@media screen and (min-width: 1920px) {
+}

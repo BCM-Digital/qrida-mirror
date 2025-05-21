@@ -1,0 +1,6 @@
+.updated-date {
+  margin: 1rem 0 0 0;
+}
+.updated-date p {
+  border-top: solid 1px var(--greyDarker);
+}

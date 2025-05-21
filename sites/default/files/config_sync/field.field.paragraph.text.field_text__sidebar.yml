@@ -1,0 +1,23 @@
+uuid: 53138285-72cc-4a40-8391-c2e8d6f9994e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text__sidebar
+    - paragraphs.paragraphs_type.text
+id: paragraph.text.field_text__sidebar
+field_name: field_text__sidebar
+entity_type: paragraph
+bundle: text
+label: Sidebar
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

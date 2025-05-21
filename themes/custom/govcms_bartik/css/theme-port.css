@@ -1,0 +1,558 @@
+:root {
+  --dark-brown: #4d3400;
+}
+
+html {
+  font-size: 16px;
+  /* Default (adjust if needed) */
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  box-shadow: unset;
+}
+
+p {
+  margin: 0 0 1.2em;
+}
+
+h4,
+h2,
+h1,
+h3,
+h5 {
+  color: currentColor;
+  font-family: 'Lato', sans-serif;
+}
+
+label {
+  font-weight: bold;
+}
+
+.node__content {
+  margin-bottom: 0;
+}
+
+/* header css start  */
+
+.header ul {
+  margin: 0;
+}
+
+#block-sitebranding {
+  display: flex;
+  flex-direction: column;
+
+  .site-branding__name,
+  .site-branding__text {
+    line-height: 18px;
+
+    a {
+      line-height: 18px;
+      letter-spacing: 0;
+    }
+  }
+
+  .site-branding__logo {
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 0.286em;
+    border-bottom: 0;
+  }
+}
+
+.search-form .js-form-type-search {
+  flex: 0 1 100%;
+
+  input {
+    outline: none;
+
+
+    &:focus {
+      border: 2px solid #E58A56;
+    }
+  }
+
+  input[type="search"] {
+    min-height: unset;
+
+  }
+
+}
+
+select {
+  height: unset;
+}
+
+.dropdown a:focus {
+  outline: none;
+}
+
+.text-content {
+  font-size: 16px;
+}
+
+.collapse .navbar-nav {
+  margin-top: 0;
+}
+
+/* program section css start  */
+
+.js-pager__items {
+  justify-content: center;
+
+  .is-active>a {
+    background-color: unset;
+    color: var(--textColor);
+    font-weight: bold;
+  }
+
+  .pager__link {
+    color: var(--orange);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  .pager__item {
+    width: fit-content;
+    padding: 10px 15px;
+    font-size: 0.929em;
+    height: auto;
+  }
+
+  .pager__item--first,
+  .pager__item--previous {
+    padding: 10px 10px 10px 0;
+  }
+
+  .pager__item--ellipsis {
+    padding: 10px 0;
+  }
+}
+
+.pager__item--next,
+.pager__item--last {
+  padding: 10px 0 10px 10px !important;
+}
+
+.js-form-type-entity-autocomplete,
+.js-form-type-select,
+.form-item-field-audience-target-id,
+.form-item-field-program-cpt-target-id,
+.js-form-item-field-cpt-program-target-id {
+  label {
+    font-weight: bold;
+    margin: 0 0 0.5rem !important;
+    font-size: 0.929em;
+  }
+}
+
+input {
+  min-height: unset !important;
+}
+
+/* news letter css  */
+
+.block-views-blockrecent-news-block-recent-news {
+  h2 {
+    font-size: 2rem;
+    margin: 0 0 1em;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: none;
+    color: var(--textColor);
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.block-views-blockall-news-block-all-news h2 {
+  letter-spacing: 0;
+}
+
+/* view css start  */
+
+.views-element-container {
+  .pager {
+    text-align: center;
+
+    .pager__items,
+    .pager__item {
+      display: inline;
+    }
+  }
+
+  hr {
+    line-height: 24px;
+  }
+}
+
+.views-all-people .form--inline .form-item {
+  flex: 0 1 auto;
+  margin: 0.5rem 1rem 0 0 !important;
+  max-width: none;
+}
+
+.view-all-faqs .pager .pager__item, .pager__item--next, .pager__item--last{
+  padding-top: 0px !important;
+}
+
+.view-all-faqs .pager__item--ellipsis {
+  padding: 10px 0 !important;
+}
+/* calculator page css  */
+
+.paragraph-calculator {
+
+  .field--name-field-calculator__text p {
+    color: var(--textColor);
+    line-height: 24px;
+  }
+}
+
+/* table css start  */
+table {
+  width: 100%;
+
+  tr th {
+    padding: 4px 9px;
+    text-align: left;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  th {
+    background: rgba(0, 0, 0, 0.51)
+  }
+
+}
+
+
+tr {
+  padding: 0.1em 0.6em !important;
+  border-bottom: 1px solid #ccc;
+  background: #efefef;
+}
+
+tr td,
+tr th {
+  padding: 4px 9px;
+  text-align: left;
+  border: 1px solid #fff;
+}
+
+/* footer css xtrat  */
+.footer-bottom {
+  font-size: 16px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    margin: 0 0 1.2em;
+  }
+
+  #block-footer-bottom-copyright {
+    p {
+      font-size: 0.8rem;
+
+
+    }
+  }
+
+  a {
+    box-shadow: none !important;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .text-content {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.paragraph-intro .page-title {
+  display: block;
+}
+
+
+/* accessibility-settings-modal css start  */
+
+body .accessibility-trigger.aioa_top_center button {
+  bottom: 26px !important;
+  left: 0;
+}
+
+
+/* contact form css  */
+
+.form-item__label.form-required::after,
+.fieldset__label.form-required::after,
+.required-mark::after {
+  background-image: url(/themes/custom/govcms_bartik/assets/icons/required.svg);
+  background-repeat: no-repeat;
+  background-size: 6px 6px;
+  vertical-align: super;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+}
+
+.webform-submission-contact-us-form {
+  .form-item__label {
+    font-weight: bold;
+  }
+
+  .fieldset__legend {
+    background-color: unset;
+    margin: 0;
+
+    .fieldset__label {
+      color: currentColor;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 24px;
+    }
+  }
+
+  .fieldset__wrapper {
+    border: unset !important;
+    padding: 0;
+
+    .form-item {
+      /* margin: 0rem; */
+
+    }
+  }
+
+  .form-item__label {
+    margin: 0;
+  }
+}
+
+.form-item label,
+.form-wrapper .label {
+  font-size: 0.929em;
+}
+
+.form-item-state-territory label {
+  margin: 0 !important;
+}
+
+.form-element--api-textarea {
+  min-height: 2em;
+  resize: vertical;
+}
+
+label.option {
+  font-weight: normal !important;
+  padding-left: 4px !important;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 1em 0;
+  padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.form-item__description {
+  margin: 0;
+}
+
+/* search form css  */
+
+input[type="search"]:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.button:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+
+/* path-search page css  */
+
+[dir="ltr"] .breadcrumb__item:nth-child(n+2):before {
+  margin-right: 0.45rem;
+  margin-left: 0.25rem;
+}
+
+.path-search {
+  section {
+    background: white;
+  }
+
+  .breadcrumb {
+    font-weight: normal;
+  }
+}
+
+.search-result__title a {
+  text-decoration: underline !important;
+}
+
+.search-result__title a:hover {
+  color: var(--orange) !important;
+  text-decoration: none !important;
+}
+
+.search-results__item:after {
+  display: none;
+}
+
+.search-result__meta {
+  display: none !important;
+}
+
+/* Faq css start  */
+.list-faqs {
+  ul {
+    list-style-type: circle;
+  }
+
+  ul ul {
+    list-style-type: square;
+  }
+}
+
+.paragraph-text {
+  ul {
+    padding: 0 0 1em 1em;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.paragraph-text-info {
+  ul {
+    padding: 0 0 1em 1em;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.paragraph-text {
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+.field:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.accordion-button {
+  line-height: 19.5px;
+}
+/* this css use for Loan calculator page  */
+.text-content p {
+  /* line-height: 24px; */
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+em {
+  line-height: 24px;
+}
+
+/* @media screen and (min-width: 1200px) {
+  #top-header .site-branding__name {
+      font-size: 1.125rem;
+  }
+} */
+
+@media (min-width: 576px) {
+
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px;
+    padding-right: .75rem;
+    padding-left: .75rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1140px;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .node__content {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .region>* {
+    margin-bottom: 0;
+  }
+}
+
+.region>* {
+  margin-bottom: 0;
+}
+
+@media (min-width: 62.5rem) {
+  .region--content {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .view>* {
+    margin-bottom: 0;
+  }
+}

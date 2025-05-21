@@ -1,0 +1,106 @@
+<!-- field__paragraph__field_tabs__tab_item__tabs.html.twig -->
+
+{% set tab_id = random(0, 100) %}
+<!-- Nav tabs -->
+<div class="tabs-wrapper">
+  <ul class="nav nav-pills" id="tab{{ tab_id }}" role="tablist">
+    {% for item in items %}
+      <li class="nav-pill" role="presentation">
+        <button class="btn {% if loop.index == 1 %}active{% endif %}" id="{{ item.content['#paragraph'].field_tab_item__id.value | raw }}-tab" data-bs-toggle="tab" data-bs-target="#{{ item.content['#paragraph'].field_tab_item__id.value | raw }}" type="button" role="tab" aria-controls="{{ item.content['#paragraph'].field_tab_item__id.value | raw }}" aria-selected="{% if loop.index == 1 %}true{% else %}false{% endif %}">
+          {{ item.content['#paragraph'].field_tab_item__link.value }}
+        </button>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    {% for item in items %}
+      <div class="tab-pane fade {% if loop.index == 1 %}show active{% endif %}" id="{{ item.content['#paragraph'].field_tab_item__id.value | raw }}" role="tabpanel" aria-labelledby="{{ item.content['#paragraph'].field_tab_item__id.value | raw }}-tab">
+        <!-- Pane inner -->
+        <div class="row tab-pane-inner">
+          <div class="col-xl">
+            {% set tab_pane = {
+              '#type':   'processed_text',
+              '#text':   item.content['#paragraph'].field_tab_item__pane.value,
+              '#format': 'full_html',
+            } %}
+            {{ tab_pane }}
+            {# {{ item.content['#paragraph'].field_tab_item__pane.value | raw }} #}
+          </div>
+
+          {% if item.content['#paragraph'].field_tab_item__info[0] or item.content['#paragraph'].field_tab_item__details[0] %}
+            <div class="col-xl-3 offset-xl-1">
+              <h4>Related information</h4>
+
+              {% for item in item.content['#paragraph'].field_tab_item__info %}
+                <span class="info-link">
+                  <a href="{{ item.url }}" target="{{ item.options.attributes.target }}" title="{{ item.options.attributes.title ? item.options.attributes.title : item.title }}">{{ item.title }}</a>
+                </span>
+              {% endfor %}
+
+              {% for item in item.content['#paragraph'].field_tab_item__details %}
+                <div class="details">
+                  {{ item.value | raw }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if item.content['#paragraph'].field_tab_item__text_buttons[0] %}
+          <!-- Pane text-buttons -->
+          <div class="row g-0 my-5">
+            <div class="paragraph paragraph-text-buttons">
+              <div class="container">
+                <div class="text-buttons-wrapper bg-{{ item.content['#paragraph'].field_tab_item__text_buttons[0].entity.field_text_buttons__background[0].value }}">
+                  <div class="row flex-row align-items-center">
+                    <div class="col-12 col-lg-8 col-xl-7">
+                      {{ item.content['#paragraph'].field_tab_item__text_buttons[0].entity.field_text_buttons__text[0].value | raw }}
+                    </div>
+
+                    <div class="col-12 col-lg-4 offset-xl-1">
+                      {% for item in item.content['#paragraph'].field_tab_item__text_buttons[0].entity.field_text_buttons__buttons %}
+                        <a class="btn {% for class in item.options.attributes.class %} {{ class }} {% endfor %}" href="{{ item.url }}" target="{{ item.options.attributes.target }}" title="{{ item.title }}">{{ item.title }}</a>
+                        <div class="w-100"></div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="row tab-extras mt-4">
+          <!-- Extras text -->
+          <div class="col-12 col-xl-4">
+            {{ item.content['#paragraph'].field_tab_item__text.value | raw }}
+          </div>
+
+          <!-- Extras FAQS -->
+          <div class="col-12 col-xl-7 offset-xl-1 mt-5 mt-xl-0">
+            <div class="accordion" id="accordion{{ tab_id }}">
+              {% for item in item.content['#paragraph'].field_tab_item__extras %}
+                {% set id_one = random(0, 50) %}
+                {% set id_two = random(50, 100) %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header m-0" id="heading{{ id_one ~ id_two }}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ id_one ~ id_two }}" aria-expanded="false" aria-controls="collapse{{ id_one ~ id_two }}">
+                      {{ item.entity.title.value }}
+                    </button>
+                  </h2>
+                  <div id="collapse{{ id_one ~ id_two }}" class="accordion-collapse collapse" aria-labelledby="heading{{ id_one ~ id_two }}">
+                    <div class="accordion-body">
+                      {{ item.entity.body.value | raw }}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

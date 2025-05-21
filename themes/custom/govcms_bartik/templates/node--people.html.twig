@@ -1,0 +1,71 @@
+<!-- node__people.html.twig -->
+{# {% for item in node.field_region %}
+  {{ dd(item) }}
+  {{ dd(item.entity) }}
+{% endfor %} #}
+
+{# {{ dd(content.field_region[0]['#taxonomy_term'].tid.value) }} #}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{{ attach_library('bartik/classy.node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {% include '/themes/custom/govcms_bartik/inc/people-intro.html.twig' %}
+
+    {% include '/themes/custom/govcms_bartik/inc/people-image-text.html.twig' %}
+
+    <div class="field__item">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="card people-card mt-5" data-region="{% for item in node.field_region %}{{ item.entity.field_tax_regions__alias[0].value }}, {% endfor %}" data-region-id="{{ content.field_region[0]['#taxonomy_term'].tid.value }}">
+              <div class="card-body">
+                <div class="container p-0">
+                  <div class="row">
+                    <div class="col-12 col-xl-3">
+                      <h2 class="h3 mb-3">{{ node.label }}</h2>
+                      {% if content.field_profile_role[0]['#title'] == 'Manager' %}
+                        <figure class="card-thumbnail">
+                          <img class="border border-dark rounded-circle" src="{{ file_url(content.field_photo[0]['#item'].entity.uri.value) }}" alt="{{ node.label }}" width="100" height="auto">
+                        </figure>
+                      {% endif %}
+                    </div>
+
+                    <div class="col-12 col-xl-9">
+                      {{ content.field_profile_details[0]['#text'] | raw }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <div class="container p-0">
+                  {% if content.field_profile_role[0]['#title'] == 'Adviser' %}
+                    {% include '/themes/custom/govcms_bartik/inc/people-adviser.html.twig' %}
+                  {% endif %}
+
+                  {% if content.field_profile_role[0]['#title'] == 'Mediator' %}
+                    {% include '/themes/custom/govcms_bartik/inc/people-mediator.html.twig' %}
+                  {% endif %}
+
+                  {% if content.field_profile_role[0]['#title'] == 'Manager' %}
+                    {% include '/themes/custom/govcms_bartik/inc/people-manager.html.twig' %}
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,8 @@
+uuid: 9139d9cf-10b2-49c7-a2a1-0f725135addd
+langcode: en
+status: true
+dependencies: {  }
+id: text_and_cards
+label: 'Text and cards'
+revision: false
+description: ''

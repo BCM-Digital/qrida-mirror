@@ -1,0 +1,19 @@
+uuid: 0ac24f49-bc97-4b5b-b546-92c61964d51f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_text__video
+    - paragraphs.paragraphs_type.image_and_text
+id: paragraph.image_and_text.field_image_text__video
+field_name: field_image_text__video
+entity_type: paragraph
+bundle: image_and_text
+label: Video
+description: '<strong>Please uncheck <i>Show player controls.</i> before copying the iframe code.</strong>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

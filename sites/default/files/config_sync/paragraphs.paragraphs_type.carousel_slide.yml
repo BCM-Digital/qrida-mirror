@@ -1,0 +1,15 @@
+uuid: 2f44b9ac-82b0-4862-98ff-44f60441dd93
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: carousel_slide
+label: 'Carousel slide'
+icon_uuid: null
+icon_default: null
+description: 'Used inside Carousel video paragraph.'
+behavior_plugins: {  }

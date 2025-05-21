@@ -1,0 +1,37 @@
+uuid: 330e2f59-f957-4259-9317-2cc3acd55f89
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_audience
+    - field.field.node.program.field_components
+    - field.field.node.program.field_disaster
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_program
+    - field.field.node.program.field_region
+    - node.type.program
+  module:
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_audience: true
+  field_components: true
+  field_disaster: true
+  field_meta_tags: true
+  field_program: true
+  field_region: true

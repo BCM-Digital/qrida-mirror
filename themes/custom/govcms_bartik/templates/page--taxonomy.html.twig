@@ -1,0 +1,42 @@
+<!-- templates/page-taxonomy.html.twig -->
+<div id="page-wrapper">
+  <div id="taxonomy">
+    {% if page.top_header %}
+      {% include '/themes/custom/govcms_bartik/inc/top-header.html.twig' %}
+    {% endif %}
+
+    {% if page.primary_menu %}
+      {% include '/themes/custom/govcms_bartik/inc/primary-menu.html.twig' %}
+    {% endif %}
+
+    {% if page.alerts %}
+      {% include '/themes/custom/govcms_bartik/inc/page-alerts.html.twig' %}
+    {% endif %}
+
+    {% if page.content %}
+      {% include '/themes/custom/govcms_bartik/inc/page-content.html.twig' %}
+    {% endif %}
+
+    {% if page.footer_top %}
+      {% include '/themes/custom/govcms_bartik/inc/footer-top.html.twig' %}
+    {% endif %}
+
+    {% if node.changed and not is_front %}
+      {% include '/themes/custom/govcms_bartik/inc/last-update.html.twig' %}
+    {% endif %}
+
+    {% if page.footer_middle %}
+      {% include '/themes/custom/govcms_bartik/inc/footer-middle.html.twig' %}
+    {% endif %}
+
+    {% if page.footer_bottom %}
+      {% include '/themes/custom/govcms_bartik/inc/footer-bottom.html.twig' %}
+    {% endif %}
+  </div>
+</div>
+
+<div class="d-none d-lg-block scroll-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+  </svg>
+</div>

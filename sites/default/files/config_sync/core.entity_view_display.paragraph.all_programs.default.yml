@@ -1,0 +1,31 @@
+uuid: c74b73d3-ef9d-432c-b295-19a19222c769
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.all_programs.field_all_programs__text
+    - field.field.paragraph.all_programs.field_all_programs__views
+    - paragraphs.paragraphs_type.all_programs
+  module:
+    - options
+    - text
+id: paragraph.all_programs.default
+targetEntityType: paragraph
+bundle: all_programs
+mode: default
+content:
+  field_all_programs__text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_all_programs__views:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

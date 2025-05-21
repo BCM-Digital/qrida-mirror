@@ -1,0 +1,14 @@
+uuid: 73957596-e16f-47e9-9a67-04a2ae108ab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.notifications
+  module:
+    - user
+id: user_remove_role_action.notifications
+label: 'Remove the Notifications role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: notifications

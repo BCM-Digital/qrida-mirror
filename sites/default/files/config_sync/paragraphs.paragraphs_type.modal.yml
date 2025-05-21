@@ -1,0 +1,12 @@
+uuid: 223b0e5f-5f85-4f5a-a850-58497ea34787
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:83960388-da2d-43b8-b3e3-89e7bb4fc680'
+id: modal
+label: Modal
+icon_uuid: 83960388-da2d-43b8-b3e3-89e7bb4fc680
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktYmFjayIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNMCAyYTIgMiAwIDAgMSAyLTJoOGEyIDIgMCAwIDEgMiAydjJoMmEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMkg2YTIgMiAwIDAgMS0yLTJ2LTJIMmEyIDIgMCAwIDEtMi0yVjJ6bTItMWExIDEgMCAwIDAtMSAxdjhhMSAxIDAgMCAwIDEgMWg4YTEgMSAwIDAgMCAxLTFWMmExIDEgMCAwIDAtMS0xSDJ6Ii8+Cjwvc3ZnPg=='
+description: ''
+behavior_plugins: {  }

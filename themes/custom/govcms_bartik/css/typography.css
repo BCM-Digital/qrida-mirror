@@ -1,0 +1,99 @@
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin: 0 0 1em;
+  text-transform: none;
+}
+h1, .h1 {
+  font-size: 2.5rem;
+}
+h2, .h2 {
+  font-size: 2rem;
+}
+h3, .h3 {
+  font-size: 1.6rem;
+}
+h4, .h4 {
+  font-size: 1.4rem;
+}
+h5, .h5 {
+  font-size: 1.2rem;
+}
+h6, .h6 {
+  font-size: 1rem;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+a {
+  border: none;
+  color: var(--orange);
+  text-decoration: underline;
+}
+ul, ol {
+  padding: 0 0 1em 1em;
+}
+mark {
+  background-color: var(--blueMedium);
+  color: var(--white);
+}
+blockquote {
+  background-color: transparent;
+  border-left: solid 6px rgba(168, 86, 4, 0.4);
+  font-size: 1.15rem;
+  font-style: normal;
+  line-height: 1.2;
+  margin: 1rem 0 1rem 2rem;
+  padding: 0 0 0 1rem;
+}
+blockquote::after,
+blockquote::before {
+  display: none;
+}
+.single-taxonomy:not(:first-of-type)::before {
+  content: "\007C";
+  display: inline-block;
+  margin: 0 0.25em;
+}
+.single-taxonomy:first-child::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags" viewBox="0 0 16 16"><path d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z"/><path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 0.8rem 0.8rem;
+  content: "";
+  display: inline-block;
+  height: 0.8rem;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  width: 0.8rem;
+}
+.text-dark {
+  color: var(--textColor) !important;
+}
+.text-orange {
+  color: var(--qridaOrange) !important;
+}
+.text-white {
+  color: var(--white) !important;
+}
+.text-shadow {
+  text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+  blockquote {
+    margin: 2rem 0 2rem 5rem;
+    padding: 0 0 0 2rem;
+  }
+}
+/* Extra large desktop */
+@media screen and (min-width: 1920px) {
+}
+@media (pointer: fine) {
+  a:hover,
+  a:focus {
+    border: none;
+    color: var(--orange);
+    text-decoration: none;
+  }
+}

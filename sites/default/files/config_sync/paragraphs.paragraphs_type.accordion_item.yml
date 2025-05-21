@@ -1,0 +1,15 @@
+uuid: 2ee24187-4ee5-4d4c-b746-93a5f2984777
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: accordion_item
+label: 'Accordion item'
+icon_uuid: null
+icon_default: null
+description: 'Used inside Accordion paragraph.'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 473f957f-9266-4c99-9ca1-7572f5d57627
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_search__text
+    - paragraphs.paragraphs_type.text_and_search
+  module:
+    - text
+id: paragraph.text_and_search.field_text_search__text
+field_name: field_text_search__text
+entity_type: paragraph
+bundle: text_and_search
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

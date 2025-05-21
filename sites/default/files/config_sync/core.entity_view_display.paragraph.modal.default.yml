@@ -1,0 +1,41 @@
+uuid: b3a936e4-0d45-4b0f-aefc-e867e735a63f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.modal.field_modal__heading
+    - field.field.paragraph.modal.field_modal__modal_item
+    - field.field.paragraph.modal.field_modal__text
+    - paragraphs.paragraphs_type.modal
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.modal.default
+targetEntityType: paragraph
+bundle: modal
+mode: default
+content:
+  field_modal__heading:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_modal__modal_item:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_modal__text:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

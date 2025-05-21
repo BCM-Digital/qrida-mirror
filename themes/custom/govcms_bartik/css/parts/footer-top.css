@@ -1,0 +1,9 @@
+.footer-top {
+  padding: 0 0 3rem 0;
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+}
+/* Extra large desktop */
+@media screen and (min-width: 1920px) {
+}

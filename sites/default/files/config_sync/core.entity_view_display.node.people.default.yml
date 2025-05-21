@@ -1,0 +1,374 @@
+uuid: 9ac61964-37bf-4df7-9107-98c8932fb85a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.people.field_accreditation_number
+    - field.field.node.people.field_accreditation_type
+    - field.field.node.people.field_address
+    - field.field.node.people.field_advisory_daily_fee
+    - field.field.node.people.field_advisory_hourly_fee
+    - field.field.node.people.field_areas_of_experience
+    - field.field.node.people.field_associations
+    - field.field.node.people.field_co_mediator_daily_fee
+    - field.field.node.people.field_co_mediator_hourly_fee
+    - field.field.node.people.field_company
+    - field.field.node.people.field_company_website
+    - field.field.node.people.field_email
+    - field.field.node.people.field_fees
+    - field.field.node.people.field_fees_negotiable
+    - field.field.node.people.field_free_call
+    - field.field.node.people.field_includes_travel_advisor
+    - field.field.node.people.field_includes_travel_comediator
+    - field.field.node.people.field_includes_travel_mediator
+    - field.field.node.people.field_industry
+    - field.field.node.people.field_mediations_as_advisor
+    - field.field.node.people.field_mediations_as_co_mediator
+    - field.field.node.people.field_mediations_as_mediator
+    - field.field.node.people.field_mediator_daily_fee
+    - field.field.node.people.field_mediator_hourly_fee
+    - field.field.node.people.field_meta_tags
+    - field.field.node.people.field_mobile
+    - field.field.node.people.field_operating_regions
+    - field.field.node.people.field_phone
+    - field.field.node.people.field_photo
+    - field.field.node.people.field_postcodes
+    - field.field.node.people.field_profession
+    - field.field.node.people.field_profile_details
+    - field.field.node.people.field_profile_role
+    - field.field.node.people.field_program_cpt
+    - field.field.node.people.field_qualifications
+    - field.field.node.people.field_region
+    - field.field.node.people.field_years_of_experience
+    - image.style.thumbnail
+    - node.type.people
+  module:
+    - image
+    - metatag
+    - telephone
+    - text
+    - user
+id: node.people.default
+targetEntityType: node
+bundle: people
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_accreditation_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_accreditation_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_address:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 146
+    region: content
+  field_advisory_daily_fee:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 142
+    region: content
+  field_advisory_hourly_fee:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 143
+    region: content
+  field_areas_of_experience:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_associations:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_co_mediator_daily_fee:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_co_mediator_hourly_fee:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_company:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 148
+    region: content
+  field_company_website:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 141
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_fees:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_fees_negotiable:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_free_call:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 140
+    region: content
+  field_includes_travel_advisor:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 138
+    region: content
+  field_includes_travel_comediator:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 139
+    region: content
+  field_includes_travel_mediator:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 147
+    region: content
+  field_industry:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_mediations_as_advisor:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_mediations_as_co_mediator:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 122
+    region: content
+  field_mediations_as_mediator:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  field_mediator_daily_fee:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 123
+    region: content
+  field_mediator_hourly_fee:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  field_mobile:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 127
+    region: content
+  field_operating_regions:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 128
+    region: content
+  field_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 129
+    region: content
+  field_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 130
+    region: content
+  field_postcodes:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 144
+    region: content
+  field_profession:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 131
+    region: content
+  field_profile_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 132
+    region: content
+  field_profile_role:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 133
+    region: content
+  field_program_cpt:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 145
+    region: content
+  field_qualifications:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 135
+    region: content
+  field_region:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 136
+    region: content
+  field_years_of_experience:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 137
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

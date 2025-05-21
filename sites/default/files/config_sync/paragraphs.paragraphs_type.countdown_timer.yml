@@ -1,0 +1,10 @@
+uuid: b74a428a-786e-424c-ae07-2d9a6da10400
+langcode: en
+status: true
+dependencies: {  }
+id: countdown_timer
+label: 'Countdown timer'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

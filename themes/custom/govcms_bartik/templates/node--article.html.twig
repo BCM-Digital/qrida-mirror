@@ -1,0 +1,26 @@
+<!-- node__article.html.twig -->
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{{ attach_library('bartik/classy.node') }}
+<article{{ attributes.addClass(classes) }}>
+  {% if content.field_webform[0] %}
+    <div class="article-with-sidebar">
+      <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+        {{ content }}
+      </div>
+    </div>
+  {% else %}
+    <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+      {{ content }}
+    </div>
+  {% endif %}
+</article>

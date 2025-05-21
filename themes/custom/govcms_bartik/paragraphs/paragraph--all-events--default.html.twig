@@ -1,0 +1,22 @@
+<!-- paragraph__all_events___default -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-all-events paragraph-events-list" id="block-views-block-all-events-block-all-events">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="events-list-wrapper">
+              {% if content.field_all_events__text[0] %}
+                {{ content.field_all_events__text[0]['#text'] | raw }}
+              {% else %}
+                <h2 class="text-center">QRIDA events</h2>
+              {% endif %}
+
+              {{ drupal_view('all_events', ''~content.field_all_events__views['#items'].value~'') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

@@ -1,0 +1,23 @@
+uuid: b439d57f-4204-4ec4-b4af-3da994c48a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_webform_media
+    - media.type.webform
+  module:
+    - webform
+id: media.webform.field_media_webform_media
+field_name: field_media_webform_media
+entity_type: media
+bundle: webform
+label: Webform
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings: {  }
+field_type: webform

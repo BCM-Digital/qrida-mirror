@@ -1,0 +1,35 @@
+<!-- node__event.html.twig -->
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{{ attach_library('bartik/classy.node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {{ content.field_intro }}
+    {{ content.field_image_and_text }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-7">
+          {{ content.body }}
+        </div>
+
+        <div class="col-12 col-xl-4 offset-xl-1">
+          {{ content.field_event__location }}
+          {{ content.field_event__dates }}
+        </div>
+      </div>
+    </div>
+
+    {{ content.field_event__map }}
+
+  </div>
+</article>

@@ -1,0 +1,41 @@
+uuid: 9a06ebc6-218e-4f4e-9ec2-32748f05ff4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.webform_default
+  module:
+    - contact
+    - file
+    - filter
+    - media
+    - paragraphs_type_permissions
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'bypass paragraphs type content access'
+  - 'delete own files'
+  - 'search content'
+  - 'use text format basic_html'
+  - 'use text format webform_default'
+  - 'view media'
+  - 'view paragraph content carousel_slide'
+  - 'view paragraph content carousel_video'
+  - 'view paragraph content icon_button'
+  - 'view paragraph content image_and_text'
+  - 'view paragraph content intro'
+  - 'view paragraph content text'
+  - 'view paragraph content text_and_cards'
+  - 'view paragraph content text_and_search'
+  - 'view paragraph content text_buttons'

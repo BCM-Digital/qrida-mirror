@@ -1,0 +1,23 @@
+uuid: ef9f2c2e-a348-4036-8762-26d12e3daf1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_text__border
+    - paragraphs.paragraphs_type.image_and_text
+  module:
+    - options
+id: paragraph.image_and_text.field_image_text__border
+field_name: field_image_text__border
+entity_type: paragraph
+bundle: image_and_text
+label: Border
+description: 'Choose if to show a border at the bottom or top and bottom of the paragraph.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'border-bottom border-dark'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

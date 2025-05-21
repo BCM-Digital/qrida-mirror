@@ -1,0 +1,30 @@
+<!-- paragraph__image_and_text__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph-image-text {{ content.field_image_text__border['#items'].value }}">
+      <div class="container">
+        <div class="row {{ content.field_image_text__flip[0]['#markup'] }} align-items-center">
+          <div class="col-12 col-md-6 col-xl-6 my-3 my-xl-0">
+            {{ content.field_image_text__text[0]['#text'] | raw }}
+          </div>
+
+          {% if content.field_image_text__image[0]['#media'] %}
+            <div class="col-12 col-md-6 col-xl-5 offset-xl-1 my-3 my-xl-0">
+              <figure class="img-wrapper m-0">
+                <img src="{{ file_url(content.field_image_text__image[0]['#media'].field_media_image.entity.uri.value) }}" alt="{{ content.field_image_text__image[0]['#media'].field_media_image.alt }}">
+              </figure>
+            </div>
+          {% endif %}
+
+          {% if content.field_image_text__video['0']['#context'] %}
+            <div class="col-12 col-md-6 my-3 my-xl-0">
+              <figure class="video-wrapper m-0 {{ content.field_image_text__ratio['#items'].value }}">
+                {{ content.field_image_text__video['0']['#context'].value | raw }}
+              </figure>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

@@ -1,0 +1,17 @@
+uuid: 0cd6b771-b2d3-4277-aade-553dbccbbae2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: People
+type: people
+description: 'QRIDA people are broken down between a Regional Area Manager (RAM) or an Advisor, with some common and differing content for each.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

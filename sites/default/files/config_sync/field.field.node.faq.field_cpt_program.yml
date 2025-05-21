@@ -1,0 +1,29 @@
+uuid: b227a0d6-e8da-4e1e-9811-c097997aefbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cpt_program
+    - node.type.faq
+    - node.type.program
+id: node.faq.field_cpt_program
+field_name: field_cpt_program
+entity_type: node
+bundle: faq
+label: Program
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

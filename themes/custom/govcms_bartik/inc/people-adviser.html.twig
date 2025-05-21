@@ -1,0 +1,105 @@
+<div class="row row-cols-md-2 row-cols-xl-4">
+  <!-- COMMON FIELDS -->
+  <div class="col-xl">
+    {% if content.field_phone[0] %}
+      <div class="card-phone mb-3">
+        <h6 class="mb-0">Phone</h6>
+        <a href="tel:{{ content.field_phone[0]['#title'] | replace({' ' : ''}) }}">{{ content.field_phone[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_mobile[0] %}
+      <div class="card-mobile mb-3">
+        <h6 class="mb-0">Mobile</h6>
+        <a href="tel:{{ content.field_mobile[0]['#title'] | replace({' ' : ''}) }}">{{ content.field_mobile[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_email[0] %}
+      <div class="card-email mb-3">
+        <h6 class="mb-0">Email</h6>
+        <a href="mailto:{{ content.field_email[0]['#context'].value }}">{{ content.field_email[0]['#context'].value }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- ADVISER FIELDS -->
+  <div class="col-xl">
+    {% if content.field_accreditation_type[0] %}
+      <div class="card-accreditation-type mb-3">
+        <h6 class="mb-0">Accreditation type</h6>
+        <p>{{ content.field_accreditation_type[0]['#context'].value }}</p>
+      </div>
+    {% endif %}
+
+    {% if content.field_accreditation_number[0] %}
+      <div class="card-accreditation-number mb-3">
+        <h6 class="mb-0">Accreditation number</h6>
+        <p>{{ content.field_accreditation_number[0]['#context'].value }}</p>
+      </div>
+    {% endif %}
+
+    {% if content.field_operating_regions[0] %}
+      <div class="card-regions mb-3">
+        <h6 class="mb-0">Operating regions</h6>
+        <p>
+          {% for item in content.field_operating_regions['#items'] %}
+            <span class="tax_term">{{ item.entity.name.value }}</span>
+          {% endfor %}
+        </p>
+      </div>
+    {% endif %}
+
+    {% if content.field_industry[0] %}
+      <div class="card-industry mb-3">
+        <h6 class="mb-0">Industry</h6>
+        <p>
+          {% for item in content.field_industry['#items'] %}
+            <span class="tax_term">{{ item.entity.name.value }}</span>
+          {% endfor %}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="col-xl">
+    {% if content.field_qualifications[0] %}
+      <div class="card-qualifications mb-3">
+        <h6 class="mb-0">Qualifications</h6>
+        {{ content.field_qualifications[0]['#text'] | raw }}
+      </div>
+    {% endif %}
+
+    {% if content.field_company[0] %}
+      <div class="card-company-name mb-3">
+        <h6 class="mb-0">Company name</h6>
+        {{ content.field_company[0]['#title'] | raw }}
+      </div>
+
+      <div class="card-company-website mb-3">
+        <h6 class="mb-0">Company website</h6>
+        <a href="{{ content.field_company[0]['#options'].entity.field_company__website.value }}" target="_blank">{{ content.field_company[0]['#options'].entity.field_company__website.value }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="col-xl">
+    {% if content.field_profession[0] %}
+      <div class="card-profession mb-3">
+        <h6 class="mb-0">Profession</h6>
+        <p>
+          {% for item in content.field_profession['#items'] %}
+            <span class="tax_term">{{ item.entity.name.value }}</span>
+          {% endfor %}
+        </p>
+      </div>
+    {% endif %}
+
+    {% if content.field_years_of_experience[0] %}
+      <div class="card-experience mb-3">
+        <h6 class="mb-0">Years of experience</h6>
+        <p>{{ content.field_years_of_experience[0]['#context'].value }}</p>
+      </div>
+    {% endif %}
+  </div>
+</div>

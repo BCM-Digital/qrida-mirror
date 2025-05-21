@@ -1,0 +1,46 @@
+<!-- /paragraphs/paragraph__text__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="container">
+      <div class="row">
+        {% if content.field_text__sidebar[0]['#markup'] == "On" %}
+          {% if content.field__text[0]['#text'] %}
+            <div class="col-12 col-xl-8">
+              <div class="paragraph paragraph-text {{ content.field_text__border['#items'].value }}">
+                {% set tab_pane = {
+                  '#type':   'processed_text',
+                  '#text':   content.field__text[0]['#text'],
+                  '#format': 'full_html',
+                } %}
+                {{ tab_pane }}
+                {# {{ content.field__text[0]['#text'] | raw }} #}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if content.field_text__form[0]['#webform'] %}
+            <div class="col-12 col-xl-4">
+              <div class="paragraph paragraph-text-webform">
+                {{ content.field_text__form }}
+              </div>
+            </div>
+          {% endif %}
+        {% else %}
+          {% if content.field__text[0]['#text'] %}
+            <div class="col-12 col-xl-10">
+              <div class="paragraph paragraph-text {{ content.field_text__border['#items'].value }}">
+                {{ content.field__text[0]['#text'] | raw }}
+              </div>
+            </div>
+          {% endif %}
+          <div class="w-100"></div>
+          {% if content.field_text__form[0]['#webform'] %}
+            <div class="col-12 col-xl-8 offset-xl-1">
+              {{ content.field_text__form }}
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

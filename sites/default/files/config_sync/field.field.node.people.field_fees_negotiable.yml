@@ -1,0 +1,23 @@
+uuid: 3bc0c1ae-96aa-4c8a-8ea7-2b88639373c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fees_negotiable
+    - node.type.people
+id: node.people.field_fees_negotiable
+field_name: field_fees_negotiable
+entity_type: node
+bundle: people
+label: 'Fees Negotiable'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

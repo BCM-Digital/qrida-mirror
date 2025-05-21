@@ -1,0 +1,9 @@
+.field--type-entity-reference {
+  font-family: inherit;
+  margin: 0 0 1rem;
+}
+
+.field--type-entity-reference.field--label-hidden,
+.field--type-entity-reference.field--label-visually_hidden {
+  display: none;
+}

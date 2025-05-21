@@ -1,0 +1,6 @@
+.paragraph-text-info h1,
+.paragraph-text-info h2,
+.paragraph-text-info h3,
+.paragraph-text-info h4 {
+  color: var(--orange);
+}

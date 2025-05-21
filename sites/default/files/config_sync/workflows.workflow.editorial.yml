@@ -1,0 +1,112 @@
+uuid: 09f4011e-1b8c-464e-8c83-835c8bb0ab4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.event
+    - node.type.faq
+    - node.type.page
+    - node.type.people
+    - node.type.program
+  module:
+    - content_moderation
+_core:
+  default_config_hash: T7gMMyFbTYLalxpIOnzJebvek2OW0b1RgLVE9I2y228
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archived
+      weight: 0
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      weight: -3
+      published: false
+      default_revision: false
+    needs_review:
+      label: 'Needs review'
+      weight: -2
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: -1
+      published: true
+      default_revision: true
+    unpublished:
+      label: Unpublished
+      weight: 1
+      published: false
+      default_revision: true
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 1
+    archived_draft:
+      label: 'Restore to Draft'
+      from:
+        - archived
+      to: draft
+      weight: 2
+    archived_published:
+      label: Restore
+      from:
+        - archived
+      to: published
+      weight: 3
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: -4
+    needs_review:
+      label: 'Needs review'
+      from:
+        - draft
+      to: needs_review
+      weight: -3
+    publish:
+      label: Publish
+      from:
+        - needs_review
+        - published
+      to: published
+      weight: -1
+    republish:
+      label: Republish
+      from:
+        - unpublished
+      to: draft
+      weight: 5
+    send_back_to_draft:
+      label: 'Send back to Draft'
+      from:
+        - needs_review
+      to: draft
+      weight: -2
+    unpublish:
+      label: Unpublish
+      from:
+        - archived
+        - published
+      to: unpublished
+      weight: 4
+  entity_types:
+    node:
+      - article
+      - event
+      - faq
+      - page
+      - people
+      - program
+  default_moderation_state: draft

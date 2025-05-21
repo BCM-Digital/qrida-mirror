@@ -1,0 +1,21 @@
+uuid: fa2a00a9-6357-4527-b434-7202a87a1630
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_all_events__views
+    - paragraphs.paragraphs_type.all_events
+  module:
+    - options
+id: paragraph.all_events.field_all_events__views
+field_name: field_all_events__views
+entity_type: paragraph
+bundle: all_events
+label: Views
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

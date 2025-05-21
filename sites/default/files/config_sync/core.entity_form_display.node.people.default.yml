@@ -1,0 +1,519 @@
+uuid: bcbf136c-4bce-4fd0-a509-bc32f51773d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.people.field_accreditation_number
+    - field.field.node.people.field_accreditation_type
+    - field.field.node.people.field_address
+    - field.field.node.people.field_advisory_daily_fee
+    - field.field.node.people.field_advisory_hourly_fee
+    - field.field.node.people.field_areas_of_experience
+    - field.field.node.people.field_associations
+    - field.field.node.people.field_co_mediator_daily_fee
+    - field.field.node.people.field_co_mediator_hourly_fee
+    - field.field.node.people.field_company
+    - field.field.node.people.field_company_website
+    - field.field.node.people.field_email
+    - field.field.node.people.field_fees
+    - field.field.node.people.field_fees_negotiable
+    - field.field.node.people.field_free_call
+    - field.field.node.people.field_includes_travel_advisor
+    - field.field.node.people.field_includes_travel_comediator
+    - field.field.node.people.field_includes_travel_mediator
+    - field.field.node.people.field_industry
+    - field.field.node.people.field_mediations_as_advisor
+    - field.field.node.people.field_mediations_as_co_mediator
+    - field.field.node.people.field_mediations_as_mediator
+    - field.field.node.people.field_mediator_daily_fee
+    - field.field.node.people.field_mediator_hourly_fee
+    - field.field.node.people.field_meta_tags
+    - field.field.node.people.field_mobile
+    - field.field.node.people.field_operating_regions
+    - field.field.node.people.field_phone
+    - field.field.node.people.field_photo
+    - field.field.node.people.field_postcodes
+    - field.field.node.people.field_profession
+    - field.field.node.people.field_profile_details
+    - field.field.node.people.field_profile_role
+    - field.field.node.people.field_program_cpt
+    - field.field.node.people.field_qualifications
+    - field.field.node.people.field_region
+    - field.field.node.people.field_years_of_experience
+    - image.style.thumbnail
+    - node.type.people
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_group
+    - image
+    - metatag
+    - path
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_roles:
+      children:
+        - group_common_fields
+        - group_manager_fields
+        - group_advisor_fields
+        - group_mediator_fields
+      label: ROLES
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_common_fields:
+      children:
+        - field_email
+        - field_phone
+        - field_mobile
+        - field_profile_details
+      label: 'COMMON FIELDS'
+      region: content
+      parent_name: group_roles
+      weight: 44
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_manager_fields:
+      children:
+        - field_photo
+        - field_address
+        - field_free_call
+        - field_region
+        - field_postcodes
+      label: 'MANAGER FIELDS'
+      region: content
+      parent_name: group_roles
+      weight: 45
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_advisor_fields:
+      children:
+        - field_accreditation_number
+        - field_accreditation_type
+        - field_associations
+        - field_company
+        - field_company_website
+        - field_profession
+        - field_industry
+        - field_years_of_experience
+        - field_qualifications
+        - field_operating_regions
+        - field_program_cpt
+      label: 'ADVISER FIELDS'
+      region: content
+      parent_name: group_roles
+      weight: 46
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_mediator_fields:
+      children:
+        - field_mediations_as_mediator
+        - field_mediator_daily_fee
+        - field_mediator_hourly_fee
+        - field_includes_travel_mediator
+        - field_mediations_as_advisor
+        - field_advisory_daily_fee
+        - field_advisory_hourly_fee
+        - field_includes_travel_advisor
+        - field_mediations_as_co_mediator
+        - field_co_mediator_daily_fee
+        - field_co_mediator_hourly_fee
+        - field_fees
+        - field_includes_travel_comediator
+        - field_fees_negotiable
+        - field_areas_of_experience
+      label: 'MEDIATOR FIELDS'
+      region: content
+      parent_name: group_roles
+      weight: 47
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.people.default
+targetEntityType: node
+bundle: people
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_accreditation_number:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_accreditation_type:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_address:
+    type: text_textarea
+    weight: 36
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_advisory_daily_fee:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_advisory_hourly_fee:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_areas_of_experience:
+    type: entity_reference_autocomplete
+    weight: 32
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_associations:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_co_mediator_daily_fee:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_co_mediator_hourly_fee:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_company:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_company_website:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 20
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_fees:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fees_negotiable:
+    type: boolean_checkbox
+    weight: 31
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_free_call:
+    type: telephone_default
+    weight: 37
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_includes_travel_advisor:
+    type: boolean_checkbox
+    weight: 25
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_includes_travel_comediator:
+    type: boolean_checkbox
+    weight: 30
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_includes_travel_mediator:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_industry:
+    type: entity_reference_autocomplete
+    weight: 16
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mediations_as_advisor:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mediations_as_co_mediator:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mediations_as_mediator:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mediator_daily_fee:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mediator_hourly_fee:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 6
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_mobile:
+    type: telephone_default
+    weight: 22
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_operating_regions:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_default
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_photo:
+    type: image_image
+    weight: 35
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_postcodes:
+    type: entity_reference_autocomplete
+    weight: 39
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_profession:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_profile_details:
+    type: text_textarea_with_summary
+    weight: 23
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_profile_role:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_program_cpt:
+    type: entity_reference_autocomplete
+    weight: 20
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_qualifications:
+    type: text_textarea
+    weight: 18
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_region:
+    type: entity_reference_autocomplete
+    weight: 38
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_years_of_experience:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true
+  uid: true

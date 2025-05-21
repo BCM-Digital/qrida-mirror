@@ -1,0 +1,21 @@
+uuid: b3fc915d-ccdf-4b06-ae08-39cd2f5d48d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_countdown_timer__style
+    - paragraphs.paragraphs_type.countdown_timer
+  module:
+    - options
+id: paragraph.countdown_timer.field_countdown_timer__style
+field_name: field_countdown_timer__style
+entity_type: paragraph
+bundle: countdown_timer
+label: Style
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

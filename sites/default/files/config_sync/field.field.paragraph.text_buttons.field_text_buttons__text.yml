@@ -1,0 +1,21 @@
+uuid: 97641544-c6a3-4015-9ccc-40fcd8557898
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_buttons__text
+    - paragraphs.paragraphs_type.text_buttons
+  module:
+    - text
+id: paragraph.text_buttons.field_text_buttons__text
+field_name: field_text_buttons__text
+entity_type: paragraph
+bundle: text_buttons
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

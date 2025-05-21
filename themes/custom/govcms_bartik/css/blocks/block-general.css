@@ -1,0 +1,36 @@
+#block-views-block-all-news-block-all-news,
+#block-views-block-all-events-block-all-events {
+  margin: 0 auto;
+  padding: 2rem var(--bs-gutter-x,.75rem);
+  width: 100%;
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  #block-views-block-all-news-block-all-news,
+  #block-views-block-all-events-block-all-events {
+    max-width: 720px;
+  }
+}
+/* Medium desktop */
+@media screen and (min-width: 992px) {
+  #block-views-block-all-news-block-all-news,
+  #block-views-block-all-events-block-all-events {
+    max-width: 960px;
+  }
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+  #block-views-block-all-news-block-all-news,
+  #block-views-block-all-events-block-all-events {
+    max-width: 1140px;
+  }
+}
+/* XLarge desktop */
+@media screen and (min-width: 1400px) {
+  #block-views-block-all-news-block-all-news,
+  #block-views-block-all-events-block-all-events {
+    max-width: 1320px;
+  }
+}
+@media (pointer: fine) {
+}

@@ -1,0 +1,31 @@
+<!-- /paragraphs/paragraph__intro__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    {% if content.field_intro__image[0]['#media'].field_media_image.entity.uri.value %}
+      <div class="paragraph paragraph-intro text-white" style="background-image:linear-gradient(90deg, rgba(0, 55, 110, 0.8) 0%, rgba(110, 65, 0, 0.8) 100%), url('{{ file_url(content.field_intro__image[0]['#media'].field_media_image.entity.uri.value) }}');">
+    {% else %}
+      <div class="paragraph-intro border-bottom text-dark">
+    {% endif %}
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center page-title">
+                {% if content.field_intro__title[0]['#context'] %}
+                  {{ content.field_intro__title[0]['#context'].value | raw }}
+                {% else %}
+                  {{ drupal_title() }}
+                {% endif %}
+              </h1>
+            </div>
+          </div>
+
+          {% if content.field_intro__buttons['#items'] %}
+            <div class="row justify-content-center">
+              {{ content.field_intro__buttons }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

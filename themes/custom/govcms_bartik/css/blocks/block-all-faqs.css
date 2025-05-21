@@ -1,0 +1,32 @@
+#block-views-block-all-faqs-block-faqs-program > h2 {
+  text-align: center;
+}
+#block-views-block-all-faqs-block-faqs-program ul.list-faqs {
+  margin: 0;
+  padding: 0;
+}
+#block-views-block-all-faqs-block-faqs-program ul.list-faqs li.list-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#block-views-block-all-faqs-block-faqs-program .faq-title {
+  color: var(--textColor);
+  font-size: 1rem;
+  font-weight: 700;
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+/* Medium desktop */
+@media screen and (min-width: 992px) {
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+  #block-views-block-all-faqs-block-faqs-program ul.list-faqs li.list-item {
+    max-width: 75%;
+  }
+}
+/* XLarge desktop */
+@media screen and (min-width: 1400px) {
+}
+@media (pointer: fine) {
+}

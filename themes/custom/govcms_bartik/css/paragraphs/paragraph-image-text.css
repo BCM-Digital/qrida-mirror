@@ -1,0 +1,23 @@
+.paragraph-image-text h1,
+.paragraph-image-text h2,
+.paragraph-image-text h3,
+.paragraph-image-text h4,
+.paragraph-image-text h5,
+.paragraph-image-text h6 {
+  line-height: 1.6;
+}
+.paragraph-image-text .ratio > iframe {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+}
+/* Extra large desktop */
+@media screen and (min-width: 1920px) {
+}

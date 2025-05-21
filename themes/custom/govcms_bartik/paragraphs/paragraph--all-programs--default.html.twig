@@ -1,0 +1,20 @@
+<!-- paragraph__all_programs__default -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-programs" id="block-views-block-program-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {% if content.field_all_programs__text[0] %}
+              {{ content.field_all_programs__text[0]['#text'] | raw }}
+            {% else %}
+              <h2 class="text-center">View QRIDA programs and services here</h2>
+            {% endif %}
+
+            {{ drupal_view('all_programs', ''~content.field_all_programs__views['#items'].value~'') }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

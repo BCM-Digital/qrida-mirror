@@ -1,0 +1,27 @@
+uuid: 96920b41-fb78-413a-8d8d-0249679ea167
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_all_events__views
+field_name: field_all_events__views
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: all_events_embed
+      label: 'All events'
+    -
+      value: all_events_past_embed
+      label: 'All past events'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

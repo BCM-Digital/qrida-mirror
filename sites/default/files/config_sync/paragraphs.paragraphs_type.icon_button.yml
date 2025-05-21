@@ -1,0 +1,15 @@
+uuid: 4cc0ec6e-ff24-401e-96ac-33a31359fd55
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: icon_button
+label: 'Icon button'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

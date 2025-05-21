@@ -1,0 +1,14 @@
+<div class="field__item">
+  <div class="paragraph paragraph-intro text-white" style="background-image:linear-gradient(90deg, rgba(48, 114, 177, 0.6) 0%, rgba(170, 122, 50, 1) 100%), url('/themes/custom/govcms_bartik/assets/images/Header_Homepage.jpeg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center my-5 page-title">
+            {% set role = content.field_profile_role[0]['#title'] %}
+            {{ node.label }} | <span class="fw-light">{% if role == 'Manager' %}Regional Area Manager{% else %}{{ role }}{% endif %}</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

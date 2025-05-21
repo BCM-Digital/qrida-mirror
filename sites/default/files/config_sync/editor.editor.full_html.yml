@@ -1,0 +1,175 @@
+uuid: 749b0b1d-dfca-4f00-8d03-0569dba917a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor5
+format: full_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - bold
+      - italic
+      - style
+      - alignment
+      - indent
+      - outdent
+      - sourceEditing
+      - '|'
+      - specialCharacters
+      - underline
+      - strikethrough
+      - blockQuote
+      - link
+      - removeFormat
+      - bulletedList
+      - numberedList
+      - '|'
+      - code
+      - codeBlock
+      - horizontalLine
+      - insertTable
+      - drupalInsertImage
+      - drupalMedia
+      - undo
+      - redo
+  plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
+    ckeditor5_heading:
+      enabled_headings:
+        - heading1
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Orange text'
+          element: '<strong class="text-orange">'
+        -
+          label: 'Dark text'
+          element: '<strong class="text-dark">'
+        -
+          label: 'White text'
+          element: '<strong class="text-white">'
+        -
+          label: 'H1 text shadow'
+          element: '<h1 class="text-shadow">'
+        -
+          label: 'H2 text shadow'
+          element: '<h2 class="text-shadow">'
+        -
+          label: 'H3 text shadow'
+          element: '<h3 class="text-shadow">'
+        -
+          label: 'H4 text shadow'
+          element: '<h4 class="text-shadow">'
+        -
+          label: 'H5 text shadow'
+          element: '<h5 class="text-shadow">'
+        -
+          label: 'H6 text shadow'
+          element: '<h6 class="text-shadow">'
+        -
+          label: 'Text shadow'
+          element: '<p class="text-shadow">'
+        -
+          label: Button
+          element: '<a class="btn btn-primary">'
+        -
+          label: 'Button small'
+          element: '<a class="btn btn-primary btn-sm">'
+        -
+          label: 'Button large'
+          element: '<a class="btn btn-primary btn-lg">'
+        -
+          label: 'Obfuscate email'
+          element: '<a class="obfuscate-email">'
+        -
+          label: 'Lead paragraph'
+          element: '<p class="lead">'
+        -
+          label: 'Table default'
+          element: '<table class="table table-blank table-borderless">'
+        -
+          label: 'Table striped'
+          element: '<table class="table table-blank table-borderless table-striped">'
+    editor_advanced_link_link:
+      enabled_attributes:
+        - rel
+        - target
+        - title
+    media_media:
+      allow_view_mode_override: false
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: null
+  max_dimensions:
+    width: null
+    height: null

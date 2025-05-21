@@ -1,0 +1,25 @@
+uuid: 70c045b5-4ab9-447d-8042-e56f3dda26df
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e3dd5c7d-881d-4fb0-bc61-01be95066260'
+  module:
+    - block_content
+  theme:
+    - govcms_bartik
+id: footer_bottom_copyright
+theme: govcms_bartik
+region: footer_bottom
+weight: -4
+provider: null
+plugin: 'block_content:e3dd5c7d-881d-4fb0-bc61-01be95066260'
+settings:
+  id: 'block_content:e3dd5c7d-881d-4fb0-bc61-01be95066260'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

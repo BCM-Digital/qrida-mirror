@@ -1,0 +1,29 @@
+uuid: c6f547a8-cddb-4e92-a85f-74a60ce3e986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tax_program_type.field_tax__icon
+    - taxonomy.vocabulary.tax_program_type
+  module:
+    - text
+id: taxonomy_term.tax_program_type.default
+targetEntityType: taxonomy_term
+bundle: tax_program_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tax__icon:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

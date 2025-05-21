@@ -1,0 +1,25 @@
+<!-- paragraph__modal__default.html.twig -->
+{% block paragraph %}
+    {% block content %}
+        <div class="paragraph paragraph-modal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl">
+                        {% if content.field_modal__heading %}
+                            {{ content.field_modal__heading }}
+                        {% endif %}
+
+                        {% if content.field_modal__text %}
+                            {{ content.field_modal__text }}
+                        {% endif %}
+                    </div>
+                    <div class="col-xl-3 offset-xl-1">
+                        <div class="paragraph-modal-buttons">
+                            {{ content.field_modal__modal_item }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

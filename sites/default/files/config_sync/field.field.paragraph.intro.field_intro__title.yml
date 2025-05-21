@@ -1,0 +1,19 @@
+uuid: a02c4228-de33-4d19-8782-3a58536309fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro__title
+    - paragraphs.paragraphs_type.intro
+id: paragraph.intro.field_intro__title
+field_name: field_intro__title
+entity_type: paragraph
+bundle: intro
+label: 'Page title'
+description: 'This should be the same of the actual <b>Title</b>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

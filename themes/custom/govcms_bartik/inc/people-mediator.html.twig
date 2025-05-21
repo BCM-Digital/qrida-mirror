@@ -1,0 +1,136 @@
+<div class="row row row-cols-md-2 row-cols-xl-3">
+  <!-- COMMON FIELDS -->
+  <div class="col-xl">
+    {% if content.field_phone[0] %}
+      <div class="card-phone mb-3">
+        <h6 class="mb-0">Phone</h6>
+        <a href="tel:{{ content.field_phone[0]['#title'] | replace({' ' : ''}) }}">{{ content.field_phone[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_mobile[0] %}
+      <div class="card-mobile mb-3">
+        <h6 class="mb-0">Mobile</h6>
+        <a href="tel:{{ content.field_mobile[0]['#title'] | replace({' ' : ''}) }}">{{ content.field_mobile[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_email[0] %}
+      <div class="card-email mb-3">
+        <h6 class="mb-0">Email</h6>
+        <a href="mailto:{{ content.field_email[0]['#context'].value }}">{{ content.field_email[0]['#context'].value }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- MEDIATOR FIELDS -->
+  <div class="col-xl">
+    <h6 class="mb-0">Experience:</h6>
+    {% if content.field_mediations_as_mediator[0] %}
+      <div class="card-accreditation-type mb-2">
+        <span class="h6">Mediation as mediator: </span>
+        <span>{{ content.field_mediations_as_mediator[0]['#context'].value }}</span>
+      </div>
+    {% endif %}
+
+    {% if content.field_mediations_as_advisor[0] %}
+      <div class="card-accreditation-number mb-2">
+        <span class="h6">Mediation as advisor: </span>
+        <span>{{ content.field_mediations_as_advisor[0]['#context'].value }}</span>
+      </div>
+    {% endif %}
+
+    {% if content.field_mediations_as_co_mediator[0] %}
+      <div class="card-accreditation-number mb-3">
+        <span class="h6">Mediation as co-mediator: </span>
+        <span>{{ content.field_mediations_as_co_mediator[0]['#context'].value }}</span>
+      </div>
+    {% endif %}
+
+    {% if content.field_areas_of_experience[0] %}
+      <div class="card-experience mb-3">
+        <h6 class="mb-0">Areas of experience:</h6>
+        <p>
+          {% for item in content.field_areas_of_experience['#items'] %}
+            <span class="tax_term">{{ item.entity.name.value }}</span>
+          {% endfor %}
+        </p>
+      </div>
+    {% endif %}
+
+    {% if content.field_operating_regions[0] %}
+      <div class="card-regions mb-3">
+        <h6 class="mb-0">Operating regions</h6>
+        <p>
+          {% for item in content.field_operating_regions['#items'] %}
+            <span class="tax_term">{{ item.entity.name.value }}</span>
+          {% endfor %}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- MEDIATOR FIELDS -->
+  <div class="col-xl">
+    <h6 class="mb-0">Rates:</h6>
+
+    <div class="card-fee mb-2">
+      {% if content.field_mediator_hourly_fee[0] %}
+        <span class="h6">Hourly fee: </span>
+        <span>{{ content.field_mediator_hourly_fee[0]['#context'].value }}</span>
+      {% endif %}
+
+      {% if content.field_mediator_daily_fee[0] %}
+        <span class="h6">Daily fee: </span>
+        <span>{{ content.field_mediator_daily_fee[0]['#context'].value }}</span>
+      {% endif %}
+
+      {% if content.field_includes_travel_mediator[0]['#markup'] == 'Yes' %}
+        <span>(includes travel)</span>
+      {% endif %}
+    </div>
+
+    <div class="card-fee mb-2">
+      {% if content.field_advisory_hourly_fee[0] %}
+        <span class="h6">Hourly fee: </span>
+        <span>{{ content.field_advisory_hourly_fee[0]['#context'].value }}</span>
+      {% endif %}
+
+      {% if content.field_advisory_daily_fee[0] %}
+        <span class="h6 mb-0">Daily fee: </span>
+        <span>{{ content.field_advisory_daily_fee[0]['#context'].value }}</span>
+      {% endif %}
+
+      {% if content.field_includes_travel_advisor[0]['#markup'] == 'Yes' %}
+        <span>(includes travel)</span>
+      {% endif %}
+    </div>
+
+    <div class="card-fee mb-2">
+      {% if content.field_co_mediator_hourly_fee[0] %}
+        <span class="h6 mb-0">Hourly fee: </span>
+        <span>{{ content.field_co_mediator_hourly_fee[0]['#context'].value }}</span>
+      {% endif %}
+
+      {% if content.field_co_mediator_daily_fee[0] %}
+        <span class="h6 mb-0">Daily fee: </span>
+        <span>{{ content.field_co_mediator_daily_fee[0]['#context'].value }}</span>
+      {% endif %}
+
+      {% if content.field_fees[0] %}
+        <span class="h6 mb-0">Fees: </span>
+        <span>{{ content.field_fees[0]['#context'].value }}</span>
+      {% endif %}
+
+      {% if content.field_includes_travel_comediator[0]['#markup'] == 'Yes' %}
+        <span>(includes travel)</span>
+      {% endif %}
+    </div>
+
+    {% if content.field_fees_negotiable[0]['#markup'] == 'Yes' %}
+      <div class="card-fee mb-0">
+        <span class="mb-0">Fees negotiable</span>
+      </div>
+    {% endif %}
+  </div>
+</div>

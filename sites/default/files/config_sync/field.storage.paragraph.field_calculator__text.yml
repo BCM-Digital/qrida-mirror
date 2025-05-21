@@ -1,0 +1,19 @@
+uuid: 7b5db171-c9cf-4e30-9275-ea039dcd086a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_calculator__text
+field_name: field_calculator__text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

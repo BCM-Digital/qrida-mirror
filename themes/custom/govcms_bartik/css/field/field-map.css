@@ -1,0 +1,9 @@
+.event-map {
+  border: solid 1px var(--greyDarker);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+}
+.event-map iframe {
+  float: left;
+}

@@ -1,0 +1,16 @@
+<!-- paragraph__accordion_item__default.html.twig -->
+{% set id_one = random(0, 50) %}
+{% set id_two = random(50, 100) %}
+<div class="accordion-item">
+  <h2 class="accordion-header m-0" id="heading{{ id_one ~ id_two }}">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ id_one ~ id_two }}" aria-expanded="false" aria-controls="collapse{{ id_one ~ id_two }}">
+      {{ content.field_accordion_item__heading['#items'].value | raw }}
+    </button>
+  </h2>
+
+  <div id="collapse{{ id_one ~ id_two }}" class="accordion-collapse collapse" aria-labelledby="heading{{ id_one ~ id_two }}">
+    <div class="accordion-body">
+      {{ content.field_accordion_item__body['#items'].value | raw }}
+    </div>
+  </div>
+</div>

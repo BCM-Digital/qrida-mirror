@@ -1,0 +1,20 @@
+uuid: a7e9dabf-f507-4e45-b5d6-08f687637b2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - webform
+id: paragraph.field_modal_item__form
+field_name: field_modal_item__form
+entity_type: paragraph
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

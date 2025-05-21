@@ -1,0 +1,17 @@
+<!-- field__node__field_event__dates__event.html.twig -->
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <strong>Event date: </strong>
+  <br />
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+</div>

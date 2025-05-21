@@ -1,0 +1,7 @@
+uuid: ea580d12-c9d6-424e-999b-756daef1e6a8
+langcode: en
+status: false
+dependencies: {  }
+formId: node_people_form
+captchaType: default
+label: node_people_form

@@ -1,0 +1,22 @@
+_core:
+  default_config_hash: JqYNByWeXZGynyqoPRWQIjp3VcQhuoyq5WlM-7YzBvI
+smtp_on: false
+smtp_host: email-smtp.ap-southeast-2.amazonaws.com
+smtp_hostbackup: ''
+smtp_port: '587'
+smtp_protocol: tls
+smtp_autotls: true
+smtp_timeout: 30
+smtp_username: AKIA3Y6OVYBKLVM52VTM
+smtp_password: BPbAikkapT6dqrsGZBGsCmEDQ89L2ENP9vxOX3fMXwFp
+smtp_from: noreply@qrida.qld.gov.au
+smtp_fromname: ''
+smtp_client_hostname: ''
+smtp_client_helo: ''
+smtp_allowhtml: true
+smtp_test_address: ayushi.vaishnav0394@gmail.com
+smtp_reroute_address: ''
+smtp_debugging: false
+smtp_debug_level: 1
+prev_mail_system: php_mail
+smtp_keepalive: false

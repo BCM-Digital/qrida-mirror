@@ -1,0 +1,25 @@
+<!-- /paragraphs/paragraph__text_buttons__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-text-buttons">
+      <div class="container">
+        <div class="text-buttons-wrapper bg-{{ content.field_text_buttons__background[0]['#markup'] }}">
+          <div class="row {{ content.field_text_buttons__flip[0]['#markup'] }} align-items-center">
+            <div class="col-lg">
+              {{ content.field_text_buttons__text[0]['#text'] | raw }}
+            </div>
+
+            {% if content.field_text_buttons__buttons['#items'] %}
+              <div class="col-12 col-lg-4 offset-xl-1">
+                {% for item in content.field_text_buttons__buttons['#items'] %}
+                  <a class="btn {% for class in item.options.attributes.class %} {{ class }} {% endfor %}" href="{{ item.url }}" target="{{ item.options.attributes.target }}" title="{{ item.title }}">{{ item.title }}</a>
+                  <div class="w-100"></div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

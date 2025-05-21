@@ -1,0 +1,48 @@
+.paragraph-people-list .people-list-wrapper {
+  border: solid 1px var(--greyLighter);
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.paragraph-people-list .people-list-wrapper [data-drupal-messages] {
+  display: none;
+}
+.paragraph-people-list .people-list-wrapper .people-list-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.paragraph-people-list .people-list-wrapper .people-list li {
+  display: inline-block;
+  flex: 0 1 50%;
+  max-width: 50%;
+  padding: 0.5rem;
+}
+.paragraph-people-list .people-list-wrapper .people-list li a {
+  color: var(--textColor);
+}
+.paragraph-people-list .people-list-wrapper .paragraph-image-text {
+  display: none;
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .paragraph-people-list .people-list-wrapper .people-list li {
+    flex: 0 1 33.33%;
+    max-width: 33.33%;
+  }
+}
+/* Large desktop */
+@media screen and (min-width: 1200px) {
+  .paragraph-people-list .people-list-wrapper {
+    margin-top: 2rem;
+  }
+  .paragraph-people-list .people-list-wrapper .people-list li {
+    flex: 0 1 25%;
+    max-width: 25%;
+  }
+}
+/* Extra large desktop */
+@media screen and (min-width: 1920px) {}
+@media (pointer: fine) {}

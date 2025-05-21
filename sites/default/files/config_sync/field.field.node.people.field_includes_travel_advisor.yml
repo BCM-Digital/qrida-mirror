@@ -1,0 +1,23 @@
+uuid: e9463efd-3a8c-40a4-a61b-f82f42811d7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_includes_travel_advisor
+    - node.type.people
+id: node.people.field_includes_travel_advisor
+field_name: field_includes_travel_advisor
+entity_type: node
+bundle: people
+label: 'Includes Travel (Advisor)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

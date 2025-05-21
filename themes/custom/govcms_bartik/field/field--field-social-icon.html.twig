@@ -1,0 +1,5 @@
+{% for item in items %}
+    <a class="footer-middle-social" href="{{ item.content.field_social_link[0]['#url'] }}" target="_blank" title="Follow QRIDA on {{ item.content.field_social_link[0]['#title'] }}">
+        {{ item.content.field_social_svg[0]['#context'].value | raw }}
+    </a>
+{% endfor %}

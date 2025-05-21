@@ -1,0 +1,21 @@
+uuid: 8c90846c-de23-4a8c-8ce7-f28473e4db5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_cards__text
+    - paragraphs.paragraphs_type.text_and_cards
+  module:
+    - text
+id: paragraph.text_and_cards.field_text_cards__text
+field_name: field_text_cards__text
+entity_type: paragraph
+bundle: text_and_cards
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

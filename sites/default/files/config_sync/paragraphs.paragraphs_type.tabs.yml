@@ -1,0 +1,12 @@
+uuid: 438e9420-73b3-4d30-b112-4aa758371e0c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:fdd817dc-ff96-429b-b932-eb318f9340d5'
+id: tabs
+label: Tabs
+icon_uuid: fdd817dc-ff96-429b-b932-eb318f9340d5
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktc2VnbWVudGVkLW5hdiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNMCA2YTIgMiAwIDAgMSAyLTJoMTJhMiAyIDAgMCAxIDIgMnYyYTIgMiAwIDAgMS0yIDJIMmEyIDIgMCAwIDEtMi0yVjZ6bTYgM2g0VjVINnY0em05LTFWNmExIDEgMCAwIDAtMS0xaC0zdjRoM2ExIDEgMCAwIDAgMS0xeiIvPgo8L3N2Zz4='
+description: ''
+behavior_plugins: {  }

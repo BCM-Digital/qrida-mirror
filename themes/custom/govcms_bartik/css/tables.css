@@ -1,0 +1,42 @@
+table {
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.table a {
+  color: var(--textColor);
+}
+.table > :not(caption) > * > * {
+  padding: 1rem 2rem;
+}
+.table-borderless tr td {
+  border: none;
+}
+.table-blank {}
+.table-blank tr {
+  background-color: transparent;
+}
+.webform-likert-table[data-likert-answers-count="2"] th:first-child {
+  width: 75%;
+}
+.webform-likert-table[data-likert-answers-count="2"] th {
+  width: 12.5%;
+}
+.webform-likert-table tr {
+  background: transparent;
+  background-color: rgba(72, 81, 99, .06);
+  border: none;
+}
+.webform-likert-table td,
+.webform-likert-table th {
+  border: none;
+}
+.webform-likert-table tr.odd {
+  background-color: var(--greyLight);
+}
+.webform-likert-table tr.even {
+  background-color: var(--greyLighter);
+}

@@ -1,0 +1,26 @@
+<!-- node__faq.html.twig -->
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{{ attach_library('bartik/classy.node') }}
+<article{{ attributes.addClass(classes) }}>
+  {{ content.field_intro }}
+
+  <div class="fild__item mt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-8">
+          {{ content.body[0]['#text'] | raw }}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

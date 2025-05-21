@@ -1,0 +1,7 @@
+<div class="tiles-wrapper">
+  {% for item in items %}
+    <div class="card p-3 p-xl-4">
+      {{ item.content['#paragraph'].field_tile_item__text.value |raw }}
+    </div>
+  {% endfor %}
+</div>

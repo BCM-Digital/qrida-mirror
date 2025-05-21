@@ -1,0 +1,14 @@
+<!-- field__paragraph__field-carousel__hero__carousel_image.html.twig -->
+{% for item in items %}
+  <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}" data-bs-id="{{ item.content['#paragraph'].id.value }}" data-bs-interval="{{ item.content['#paragraph'].field_carousel__duration.value }}">
+    <img src="{{ item.content['#paragraph'].field_carousel__image[0]|file_url }}" alt="{{ item.content['#paragraph'].field_carousel__image[0].name }}" class="d-block w-100">
+
+    <div class="carousel-caption">
+      {{ item.content['#paragraph'].field_carousel__text.value | raw }}
+
+      <a href="{{ item.content['#paragraph'].field_carousel__cta[0].url }}" title="{{ item.content['#paragraph'].field_carousel__cta[0].title }}" target="{{ item.content['#paragraph'].field_carousel__cta[0].options.attributes.target }}" class="mt-3 {% for item in item.content['#paragraph'].field_carousel__cta[0].options.attributes.class %} {{ item }} {% endfor %}">
+        {{ item.content['#paragraph'].field_carousel__cta[0].title }}
+      </a>
+    </div>
+  </div>
+{% endfor %}

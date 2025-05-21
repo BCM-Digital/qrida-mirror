@@ -1,0 +1,82 @@
+uuid: fb43bc28-b93d-48f7-b0aa-52a82f977305
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_tabs__heading
+    - field.field.paragraph.tabs.field_tabs__tab_item
+    - field.field.paragraph.tabs.field_tabs__text
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - field_group
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_items:
+      children:
+        - field_tabs__tab_item
+      label: ITEMS
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_content:
+      children:
+        - field_tabs__heading
+        - field_tabs__text
+      label: CONTENT
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_tabs__heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tabs__tab_item:
+    type: entity_reference_paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: tab_item
+    third_party_settings: {  }
+  field_tabs__text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,24 @@
+<!-- paragraph__modal_item__default.html.twig -->
+{% set id_one = random(0, 50) %}
+{% set id_two = random(50, 100) %}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal{{ id_one ~ id_two }}">
+    {{ content.field_modal_item__button['#items'].value | raw }}
+</button>
+
+<div class="modal fade" id="modal{{ id_one ~ id_two }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal{{ id_one ~ id_two }}Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">{{ content.field_modal_item__title['#items'].value | raw }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{ content.field_modal_item__body['#items'].value | raw }}
+
+                {% if content.field_modal_item__form[0]['#webform'] %}
+                    {{ content.field_modal_item__form }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

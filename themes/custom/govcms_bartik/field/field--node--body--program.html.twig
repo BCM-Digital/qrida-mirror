@@ -1,0 +1,22 @@
+<!-- field__node__body__program.html.twig -->
+{%
+  set classes = [
+    'field',
+    'field-cpt',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% for item in items %}
+          {{ item.content }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

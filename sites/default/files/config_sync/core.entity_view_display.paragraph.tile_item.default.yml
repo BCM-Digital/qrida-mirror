@@ -1,0 +1,22 @@
+uuid: 6ca79c03-0bd5-41a7-9502-0270acfa2821
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tile_item.field_tile_item__text
+    - paragraphs.paragraphs_type.tile_item
+  module:
+    - text
+id: paragraph.tile_item.default
+targetEntityType: paragraph
+bundle: tile_item
+mode: default
+content:
+  field_tile_item__text:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

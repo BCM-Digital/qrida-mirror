@@ -1,0 +1,19 @@
+uuid: 8925d420-d80a-4b7f-b7c6-b062e13c1dce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_advisory_hourly_fee
+    - node.type.people
+id: node.people.field_advisory_hourly_fee
+field_name: field_advisory_hourly_fee
+entity_type: node
+bundle: people
+label: 'Advisory Hourly Fee'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,56 @@
+_core:
+  default_config_hash: x6bhN6WZwfVUI_LLMvRJIUW_2c26VTaBozbfXmJWmro
+seckit_xss:
+  csp:
+    checkbox: true
+    vendor-prefix:
+      x: false
+      webkit: false
+    report-only: false
+    default-src: "'self'"
+    script-src: "'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.jsdelivr.net https://*.facebook.net https://*.hotjar.com https://*.hotjar.io https://*.google-analytics.com https://*.google.com https://*.googletagmanager.com https://*.youtube.com https://*.doubleclick.net https://*.skynettechnologies.com https://*.skynettechnologies.us https://*.unpkg.com https://unpkg.com https://cdnjs.cloudflare.com https://*.qgso.qld.gov.au"
+    object-src: "'self'"
+    style-src: "'self' 'unsafe-inline' https://*.googleapis.com https://*.jsdelivr.net https://*.skynettechnologies.com https://cdnjs.cloudflare.com"
+    img-src: "'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://*.facebook.com https://*.skynettechnologies.com https://*.google.com https://*.google.com.au"
+    media-src: "'self' https://*.facebook.com https://*.youtube.com https://*.jsdelivr.net https://*.skynettechnologies.com"
+    frame-src: 'https://*.facebook.com https://*.youtube.com https://*.jsdelivr.net https://*.skynettechnologies.com *.skynettechnologies.us https://*.hotjar.com https://*.hotjar.io https://*.jsdeliver.net https://*.doubleclick.net https://*.qgso.qld.gov.au'
+    frame-ancestors: ''
+    child-src: ''
+    font-src: "'self' https://*.gstatic.com https://*.googleapis.com https://*.skynettechnologies.com https://*.skynettechnologies.us https://*.jsdelivr.net https://cdnjs.cloudflare.com https://*.qgso.qld.gov.au"
+    connect-src: "'self' https://*.google-analytics.com https://*.google.com https://*.google.com.au *.googletagmanager.com *.facebook.net *.google.com *.youtube.com *.doubleclick.net *.hotjar.com wss://*.hotjar.com wss://*.hotjar.io https://*.hotjar.io https://*.skynettechnologies.com https://*.skynettechnologies.us https://cdnjs.cloudflare.com https://*.qgso.qld.gov.au"
+    report-uri: ''
+    upgrade-req: false
+    policy-uri: ''
+  x_xss:
+    seckit_x_xss_option_disable: Disabled
+    seckit_x_xss_option_0: '0'
+    seckit_x_xss_option_1: 1;
+    seckit_x_xss_option_1_block: '1; mode=block'
+    select: 2
+seckit_csrf:
+  origin: false
+  origin_whitelist: ''
+seckit_clickjacking:
+  js_css_noscript: false
+  noscript_message: 'Sorry, you need to enable JavaScript to visit this website.'
+  x_frame: '1'
+  x_frame_allow_from: ''
+seckit_ssl:
+  hsts: true
+  hsts_subdomains: true
+  hsts_max_age: 63072000
+  hsts_preload: true
+seckit_ct:
+  expect_ct: false
+  max_age: 86400
+  report_uri: ''
+  enforce: false
+seckit_fp:
+  feature_policy: true
+  feature_policy_policy: 'geolocation=("self"), microphone=(self)'
+seckit_various:
+  from_origin: false
+  from_origin_destination: same
+  referrer_policy: true
+  referrer_policy_policy: no-referrer-when-downgrade
+  disable_autocomplete: false

@@ -1,0 +1,57 @@
+<div class="row row row-cols-md-2 row-cols-xl-4">
+  <!-- COMMON FIELDS -->
+  <div class="col-xl">
+    {% if content.field_free_call[0] %}
+      <div class="card-accreditation-number mb-3">
+        <h6 class="mb-0">Free call number</h6>
+        <a href="tel:{{ content.field_free_call[0]['#title'] | replace({' ' : ''}) }}">{{ content.field_free_call[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_phone[0] %}
+      <div class="card-phone mb-3">
+        <h6 class="mb-0">Phone</h6>
+        <a href="tel:{{ content.field_phone[0]['#title'] | replace({' ' : ''}) }}">{{ content.field_phone[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_mobile[0] %}
+      <div class="card-mobile mb-3">
+        <h6 class="mb-0">Mobile</h6>
+        <a href="tel:{{ content.field_mobile[0]['#title'] | replace({' ' : ''}) }}">{{ content.field_mobile[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- MANAGER FIELDS -->
+  <div class="col-xl">
+    {% if content.field_email[0] %}
+      <div class="card-email mb-3">
+        <h6 class="mb-0">Email</h6>
+        <a href="mailto:{{ content.field_email[0]['#context'].value }}">{{ content.field_email[0]['#context'].value }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="col-xl">
+    {% if content.field_address[0] %}
+      <div class="card-address mb-3">
+        <h6 class="mb-0">Address</h6>
+        {{ content.field_address[0]['#text'] | raw }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="col-xl">
+    {% if content.field_region[0] %}
+      <div class="card-regions mb-3">
+        <h6 class="mb-0">Regions</h6>
+        <p>
+          {% for item in content.field_region['#items'] %}
+            <span class="tax_term">{{ item.entity.name.value }}</span>
+          {% endfor %}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</div>

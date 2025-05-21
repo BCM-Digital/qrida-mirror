@@ -1,0 +1,20 @@
+uuid: 5d4f99ae-16e4-4a62-8825-8116ed63bc4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_countdown_timer__end_date
+field_name: field_countdown_timer__end_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

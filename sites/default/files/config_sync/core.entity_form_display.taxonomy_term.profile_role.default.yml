@@ -1,0 +1,29 @@
+uuid: 29969d9b-24e6-4165-8bab-c40cba5f8528
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.profile_role
+id: taxonomy_term.profile_role.default
+targetEntityType: taxonomy_term
+bundle: profile_role
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

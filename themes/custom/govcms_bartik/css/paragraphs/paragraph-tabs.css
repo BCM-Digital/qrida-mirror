@@ -1,0 +1,6 @@
+.paragraph-tabs .tab-pane-inner h1,
+.paragraph-tabs .tab-pane-inner h2,
+.paragraph-tabs .tab-pane-inner h3,
+.paragraph-tabs .tab-pane-inner h4 {
+  color: var(--orange);
+}

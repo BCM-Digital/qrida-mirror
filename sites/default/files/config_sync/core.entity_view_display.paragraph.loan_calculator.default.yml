@@ -1,0 +1,22 @@
+uuid: be273b72-9afc-4afa-b87a-8fc2c5eff620
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.loan_calculator.field_calculator__text
+    - paragraphs.paragraphs_type.loan_calculator
+  module:
+    - text
+id: paragraph.loan_calculator.default
+targetEntityType: paragraph
+bundle: loan_calculator
+mode: default
+content:
+  field_calculator__text:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

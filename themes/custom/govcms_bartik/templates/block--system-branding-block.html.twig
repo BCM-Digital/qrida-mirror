@@ -1,0 +1,19 @@
+{% extends "block.html.twig" %}
+
+{% set attributes = attributes.removeClass('site-branding') %}
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" rel="home" class="site-branding__logo">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" width="200" height="35" />
+    </a>
+  {% endif %}
+  {% if site_name %}
+    <div class="site-branding__text">
+      {% if site_name %}
+        <div class="site-branding__name">
+          <a href="{{ path('<front>') }}" rel="home" title="{{ site_name }}">{{ site_name }}</a>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}

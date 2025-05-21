@@ -1,0 +1,24 @@
+uuid: 76396ea8-da74-463f-af16-af93e25a8dee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_item__text
+    - paragraphs.paragraphs_type.tab_item
+  module:
+    - text
+id: paragraph.tab_item.field_tab_item__text
+field_name: field_tab_item__text
+entity_type: paragraph
+bundle: tab_item
+label: Text
+description: 'This text appears on the LHS of the accordion section.'
+required: false
+translatable: false
+default_value:
+  -
+    value: '<h2>Frequently asked questions</h2><p><a href="/tools-resources/faqs">View all FAQs</a></p>'
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

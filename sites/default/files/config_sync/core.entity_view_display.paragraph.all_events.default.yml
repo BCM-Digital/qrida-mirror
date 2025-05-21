@@ -1,0 +1,31 @@
+uuid: 531affa2-7355-4f32-9486-24b6b1998968
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.all_events.field_all_events__text
+    - field.field.paragraph.all_events.field_all_events__views
+    - paragraphs.paragraphs_type.all_events
+  module:
+    - options
+    - text
+id: paragraph.all_events.default
+targetEntityType: paragraph
+bundle: all_events
+mode: default
+content:
+  field_all_events__text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_all_events__views:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

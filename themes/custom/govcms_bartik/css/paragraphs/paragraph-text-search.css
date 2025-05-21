@@ -1,0 +1,17 @@
+.paragraph-text-search {}
+.paragraph-text-search .quick-links a {
+  margin: 0 0.25rem;
+}
+
+@media (pointer: fine) {
+  .paragraph-text-search .quick-links a:hover,
+  .paragraph-text-search .quick-links a:focus {
+    border: none;
+  }
+}
+/* Small desktop */
+@media only screen and (min-width: 960px) {
+  .paragraph-text-search {
+    padding: 3rem 0;
+  }
+}

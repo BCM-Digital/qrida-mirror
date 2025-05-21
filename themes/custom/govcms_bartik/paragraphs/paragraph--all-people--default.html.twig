@@ -1,0 +1,22 @@
+<!-- paragraph__all_people___default -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-all-people paragraph-people-list" id="block-views-block-all-people-block-all-people">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="people-list-wrapper">
+              {% if content.field_all_people__text[0] %}
+                {{ content.field_all_people__text[0]['#text'] | raw }}
+              {% else %}
+                <h2 class="text-center">Find your local Adviser, Mediator or Regional Area Manager</h2>
+              {% endif %}
+
+              {{ drupal_view('all_people', ''~content.field_all_people__views['#items'].value~'') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

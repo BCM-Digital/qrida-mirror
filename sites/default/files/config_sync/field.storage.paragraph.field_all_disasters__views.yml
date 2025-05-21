@@ -1,0 +1,162 @@
+uuid: b7dcfc83-efaa-4eff-812b-2f6663252010
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_all_disasters__views
+field_name: field_all_disasters__views
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: embed_all_disasters
+      label: 'All disasters'
+    -
+      value: embed_all_disasters_business
+      label: 'All disasters for business'
+    -
+      value: embed_all_disasters_producers
+      label: 'All disasters for primary producers'
+    -
+      value: embed_all_disasters_nonprofit
+      label: 'All disasters for non-profit'
+    -
+      value: all_disasters_small_business_8sept_nov_11
+      label: all_disasters_small_business_8sept_nov_11
+    -
+      value: all_disasters_producers_01
+      label: 'All disasters for primary producers, 22 February - 5 April 2022'
+    -
+      value: all_disasters_producers_02
+      label: 'All disasters for primary producers, 7-10 January 2022'
+    -
+      value: all_disasters_producers_03
+      label: 'All disasters for primary producers, 10 Nov - 3 Dec 2021'
+    -
+      value: all_disasters_producers_04
+      label: 'All disasters for primary producers, 25 Feb - 3 Mar 2021'
+    -
+      value: all_disasters_producers_05
+      label: 'All disasters for primary producers, 20-31 Mar 2021'
+    -
+      value: all_disasters_producers_06
+      label: 'All disasters for primary producers, 25 Jan - 14 Feb 2019'
+    -
+      value: all_disasters_producers_07
+      label: 'All disasters for primary producers, 6 – 20 May 2022'
+    -
+      value: all_disasters_producers_08
+      label: 'All disasters for primary producers, 21 April – 12 May 2022'
+    -
+      value: all_disasters_producers_09
+      label: 'All disasters primary producers, 20 Dec 2022 – Mar 2023'
+    -
+      value: all_disasters_producers_10
+      label: 'All disasters, primary producers commencing 8 September 2023'
+    -
+      value: all_disasters_producers_11
+      label: 'All disasters, primary producers, TC Jasper commencing 13 December 2023'
+    -
+      value: all_disasters_producers_12
+      label: 'All disasters for primary producers, commencing 18 October 2023'
+    -
+      value: all_disasters_producers_14
+      label: 'All disasters primary producer, commencing 24 December 2023'
+    -
+      value: all_disasters_producers_15
+      label: 'All disasters primary producer, TC Kirrily, commencing 25 January 2024'
+    -
+      value: all_disasters_producers_16
+      label: 'All disasters primary producer, North and Far North Tropical Low, commencing 29 January 2025'
+    -
+      value: all_disasters_producers_17
+      label: 'All disasters primary producer, TC Alfred 1 March'
+    -
+      value: all_disasters_producers_18
+      label: 'All disasters primary producer, WQ Surface Trough and Associated Rainfall and Flooding, commencing 21 March 2025'
+    -
+      value: 'All disasters, primary producers commencing 8 September 2023'
+      label: 'Do not use'
+    -
+      value: all_disasters_business_05
+      label: 'All disasters for business, 20 Dec 2022 – Mar 2023'
+    -
+      value: all_disasters_business_04
+      label: 'All disasters for business, 6 – 20 May 2022'
+    -
+      value: all_disasters_business_01
+      label: 'All disasters for business, 22 Feb - 5 Apr 2022'
+    -
+      value: all_disasters_business_02
+      label: 'All disasters for business, 2-10 Jan 2022'
+    -
+      value: all_disasters_business_03
+      label: 'All disasters for business, 10 Nov - 3 Dec 2021'
+    -
+      value: all_disasters_business_06
+      label: 'All disasters, small business, SQ storms, 24 December 23 - 3 Jan 24'
+    -
+      value: all_disasters_business_07
+      label: 'All disasters for business, Tropical Cyclone Jasper, 13-28 Dec'
+    -
+      value: all_disasters_business_08
+      label: 'All disasters for business, TC Jasper, 13-28 Dec'
+    -
+      value: all_disasters_business_09
+      label: 'All disasters for business, SQ fires 8 Sept - 7 Nov'
+    -
+      value: all_disasters_business_10
+      label: 'All disasters for business, Burnett and Wide Bay 9 Dec-14 Jan'
+    -
+      value: all_disasters_business_11
+      label: 'All disasters for business, North and Far North Tropical Low, commencing 29 January 2025'
+    -
+      value: all_disasters_business_12
+      label: 'All disasters for business, TC Alfred 1 March'
+    -
+      value: all_disasters_business_13
+      label: 'All disasters for business, WQ Surface Trough and Associated Rainfall and Flooding, commencing 21 March 2025'
+    -
+      value: all_disasters_nonprofit_03
+      label: 'All disasters non-profit, 6 - 20 May 2022'
+    -
+      value: all_disasters_nonprofit_01
+      label: 'All disasters non-profit, 22 Feb - 5 Apr 2022'
+    -
+      value: all_disasters_nonprofit_02
+      label: 'All disasters non-profit, 2-10 Jan 2022'
+    -
+      value: all_disasters_nonprofit_04
+      label: 'All disasters nonprofit, 20 December 2022 – March 2023'
+    -
+      value: all_disasters_nonprofit_05
+      label: 'All disasters, non-profit, SQ storms, 24 Dec 23 - 3 Jan 24'
+    -
+      value: all_disasters_nonprofit_06
+      label: 'All disasters, nonprofit, SQ Storms 13  - 28 Dec'
+    -
+      value: all_disasters_nonprofit_07
+      label: 'All disasters, nonprofit, TC Jasper'
+    -
+      value: all_disasters_nonprofit_08
+      label: 'All disasters for nonprofit, Burnett and Wide Bay 9 Dec-14 Jan'
+    -
+      value: all_disasters_nonprofit_09
+      label: 'All disasters for nonprofit, North and Far North Tropical Low, commencing 29 January 2025'
+    -
+      value: all_disasters_nonprofit_10
+      label: 'All disasters for nonprofit, TC Alfred 1 March'
+    -
+      value: all_disasters_nonprofit_11
+      label: 'All disasters for nonprofit, WQ Surface Trough and Associated Rainfall and Flooding, commencing 21 March 2025'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

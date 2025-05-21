@@ -1,0 +1,10 @@
+<!-- field__paragraph__field_tabs__info__tabs.html.twig -->
+<div class="info-wrapper">
+  <h3 class="h4 fw-bold mb-3">Related information</h3>
+
+  {% for item in items %}
+    <span class="info-link">
+      {{ item.content }}
+    </span>
+  {% endfor %}
+</div>

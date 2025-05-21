@@ -1,0 +1,9 @@
+uuid: 4c190012-1a7b-491b-bbc0-475853015bcb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Program type'
+vid: tax_program_type
+description: 'Used for People and Program CPTs'
+weight: 0
+new_revision: false

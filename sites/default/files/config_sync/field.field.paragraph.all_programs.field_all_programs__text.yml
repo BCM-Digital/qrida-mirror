@@ -1,0 +1,21 @@
+uuid: e015aeba-50a1-4460-882c-e0735bccedbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_all_programs__text
+    - paragraphs.paragraphs_type.all_programs
+  module:
+    - text
+id: paragraph.all_programs.field_all_programs__text
+field_name: field_all_programs__text
+entity_type: paragraph
+bundle: all_programs
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

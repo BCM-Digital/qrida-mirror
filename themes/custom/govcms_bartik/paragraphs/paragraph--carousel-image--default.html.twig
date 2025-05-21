@@ -1,0 +1,31 @@
+<!-- paragraph__carousel_image__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph-carousel-image">
+      <div class="row g-0">
+        <div class="col-12">
+          {% set carousel_id = random(1000, 9999) %}
+          {% set carousel_az = random('a' .. 'z') %}
+          <div id="carouselImage{{ carousel_id ~ carousel_az ~ carousel_id }}" class="carousel slide {{ content.field_carousel__animation_type[0]['#markup'] }}" data-bs-ride="carousel" data-bs-pause="false">
+            <div class="carousel-indicators d-none d-md-flex">
+              {% for item in content.field_carousel__hero['#items'] %}
+                <button type="button" data-bs-target="#carouselImage{{ carousel_id ~ carousel_az ~ carousel_id }}" data-bs-slide-to="{{ loop.index0 }}" {% if loop.index0 == '0' %}class="active" aria-current="true"{% endif %}></button>
+              {% endfor %}
+            </div>
+            <div class="carousel-inner {{ content.field_carousel__aspect_ratio['#items'][0].value }}">
+              {{ content }}
+            </div>
+            <button class="carousel-control-prev d-none d-lg-block" type="button" data-bs-target="#carouselImage{{ carousel_id ~ carousel_az ~ carousel_id }}" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-none d-lg-block" type="button" data-bs-target="#carouselImage{{ carousel_id ~ carousel_az ~ carousel_id }}" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

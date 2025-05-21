@@ -1,0 +1,26 @@
+<!-- paragraph__accordion__default.html.twig -->
+{% block paragraph %}
+  {% block content %}
+    <div class="paragraph paragraph-accordion">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-4">
+            {% if content.field_accordion__heading %}
+              {{ content.field_accordion__heading }}
+            {% endif %}
+
+            {% if content.field_accordion__text %}
+              {{ content.field_accordion__text }}
+            {% endif %}
+          </div>
+
+          <div class="col-12 col-xl-7 offset-xl-1 mt-5 mt-xl-0">
+            <div class="accordion" id="accordion{{ content.field_accordion__id[0]['#context'].value | capitalize }}">
+              {{ content.field_accordion__accordion_item }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endblock %}

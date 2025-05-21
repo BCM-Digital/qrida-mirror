@@ -1,0 +1,39 @@
+uuid: b116f9dd-b2b6-4add-a69d-be1d75b4cad2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert_block
+    - field.field.block_content.alert_block.body
+    - field.field.block_content.alert_block.field_alerts__alert_type
+    - field.field.block_content.alert_block.field_alerts__icon
+  module:
+    - options
+    - text
+id: block_content.alert_block.default
+targetEntityType: block_content
+bundle: alert_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_alerts__alert_type:
+    type: list_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_alerts__icon:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,25 @@
+uuid: 24f3c02c-778a-4518-b994-b988a797efd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_carousel__duration
+    - paragraphs.paragraphs_type.carousel_slide
+id: paragraph.carousel_slide.field_carousel__duration
+field_name: field_carousel__duration
+entity_type: paragraph
+bundle: carousel_slide
+label: Duration
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 3000
+default_value_callback: ''
+settings:
+  min: 3000
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

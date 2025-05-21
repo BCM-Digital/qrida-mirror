@@ -1,0 +1,36 @@
+<!-- templates/page__news.html.twig -->
+<div id="page-wrapper">
+  <div id="page" data-node-id="{{ node.id }}">
+    {% if page.top_header %}
+      {% include '/themes/custom/govcms_bartik/inc/top-header.html.twig' %}
+    {% endif %}
+
+    {% if page.primary_menu %}
+      {% include '/themes/custom/govcms_bartik/inc/primary-menu.html.twig' %}
+    {% endif %}
+
+    {% if page.alerts %}
+      {% include '/themes/custom/govcms_bartik/inc/page-alerts.html.twig' %}
+    {% endif %}
+
+    {% if page.content %}
+      {% include '/themes/custom/govcms_bartik/inc/page-content.html.twig' %}
+    {% endif %}
+
+    {% if page.footer_top %}
+      {% include '/themes/custom/govcms_bartik/inc/footer-top.html.twig' %}
+    {% endif %}
+
+    {% if node.changed and not is_front %}
+      {% include '/themes/custom/govcms_bartik/inc/last-update.html.twig' %}
+    {% endif %}
+
+    {% if page.footer_middle %}
+      {% include '/themes/custom/govcms_bartik/inc/footer-middle.html.twig' %}
+    {% endif %}
+
+    {% if page.footer_bottom %}
+      {% include '/themes/custom/govcms_bartik/inc/footer-bottom.html.twig' %}
+    {% endif %}
+  </div>
+</div>

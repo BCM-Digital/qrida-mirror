@@ -1,0 +1,19 @@
+uuid: be3e5f2e-f15f-4571-bfd2-37b2fe355428
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news_block
+    - field.storage.block_content.field_news_block__title
+id: block_content.news_block.field_news_block__title
+field_name: field_news_block__title
+entity_type: block_content
+bundle: news_block
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

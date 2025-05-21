@@ -1,0 +1,38 @@
+uuid: be7aac4d-e753-45b5-af4c-73162b729373
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent_news
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - govcms_bartik
+id: views_block__recent_news_block_recent_news
+theme: govcms_bartik
+region: footer_top
+weight: -4
+provider: null
+plugin: 'views_block:recent_news-block_recent_news'
+settings:
+  id: 'views_block:recent_news-block_recent_news'
+  label: 'News and events for your region'
+  label_display: visible
+  provider: views
+  views_label: 'News and events for your region'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+      program: program
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/access-information\r\n/customer-complaints\r\n/public-interest-disclosure-statement\r\n/primary-producers\r\n/business\r\n/non-profit-organisations\r\n/farm-debt-services\r\n/queensland-rural-debt-survey\r\n/calculators\r\n/tools-resources/forms-downloads\r\n/rainfall-chart\r\n/loan-review\r\n/reviewing-decision\r\n/tools-resources/faqs\r\n/information-farmers\r\n/information-mortgagees\r\n/information-advisors-and-agents\r\n/information-mediators\r\n/copyright\r\n/disclaimer\r\n/privacy\r\n/right-information\r\n/accessibility\r\n/contact-us\r\n/interest-rate"

@@ -1,0 +1,47 @@
+uuid: 6b1f5c9b-6481-4dc2-9436-8e4172a25b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_video.field_carousel__slide
+    - paragraphs.paragraphs_type.carousel_video
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_item:
+      children:
+        - field_carousel__slide
+      label: ITEM
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.carousel_video.default
+targetEntityType: paragraph
+bundle: carousel_video
+mode: default
+content:
+  field_carousel__slide:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

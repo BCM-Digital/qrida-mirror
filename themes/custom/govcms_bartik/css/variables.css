@@ -1,0 +1,29 @@
+:root {
+  --black: #000000;
+  --blueMedium: #3072B1;
+  --gold: #95784C;
+  --green: #A2D6D6;
+  --greyCharcoal: #343A40;
+  --greyLight: #F2F2F2;
+  --greyLighter: #EEEEEE;
+  --greyDarker: #485163;
+  --orange: #A85604;
+  --orangeEarthy: #BC591C;
+  --orangeLighter: #AA7A32;
+  --orangeAlt: #E58A56;
+  --red: #DC3545;
+  --white: #FFFFFF;
+
+  /* PALETTE */
+  --bodyBgColor: var(--greyLighter);
+  --bodyColor: var(--white);
+  --headerBgColor: var(--greyDarker);
+  --textColor: var(--greyDarker);
+  --qridaOrange: var(--orange);
+  --qridaBlue: var(--blueMedium);
+
+  --danger: #9F0612;
+  --warning: #A85604;
+  --success: #3A6E00;
+  --info: #3C6EC7;
+}

@@ -1,0 +1,32 @@
+.alert {
+  border: none;
+  border-radius: 0;
+  color: var(--white); /* Ensure --white is defined */
+}
+
+.alert a {
+  color: var(--white); /* Ensure --white is defined */
+}
+
+.alert-success {
+  background-color: var(--success); /* Ensure --success is defined */
+}
+
+.alert-warning {
+  background-color: var(--warning); /* Ensure --warning is defined */
+}
+
+.alert-danger {
+  background-color: var(--danger); /* Ensure --danger is defined */
+}
+
+.alert-info {
+  background-color: var(--info); /* Ensure --info is defined */
+}
+
+@media (pointer: fine) {
+  .alert a:hover,
+  .alert a:focus {
+    border-bottom: none;
+  }
+}

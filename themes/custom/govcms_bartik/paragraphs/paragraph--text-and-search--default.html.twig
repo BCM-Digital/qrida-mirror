@@ -1,0 +1,26 @@
+<!-- /paragraphs/paragraph__text_and_search__default.html.twig -->
+<div class="paragraph paragraph-text-search">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-xl-6 col-xxl-6">
+        {{ content.field_text_search__text[0]['#text'] | raw }}
+      </div>
+
+      <div class="col-12 col-xl-6 offset-xxl-1 col-xxl-5 mt-3 mt-xl-0">
+        {{ drupal_block('search_form_block') }}
+
+        {% if content.field_text_search__quick_links['#items'] %}
+          <div class="w-100"></div>
+
+          {% if content.field_text_search__quick_links['#items'] %}
+            <div class="quick-links text-center pt-4"><strong>Quick links: </strong>
+              {% for item in content.field_text_search__quick_links['#items'] %}
+                <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
