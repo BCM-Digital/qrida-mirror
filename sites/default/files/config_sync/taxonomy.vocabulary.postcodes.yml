@@ -1,9 +1,0 @@
-uuid: 01392345-37ba-45e4-9960-a9b7ae815581
-langcode: en
-status: true
-dependencies: {  }
-name: Postcodes
-vid: postcodes
-description: 'Used for People CPT'
-weight: 0
-new_revision: false

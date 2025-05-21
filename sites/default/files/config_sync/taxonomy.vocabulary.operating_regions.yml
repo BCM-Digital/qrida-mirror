@@ -1,9 +1,0 @@
-uuid: 7a5a90ef-cef8-4d61-afed-d5adf7f7a396
-langcode: en
-status: true
-dependencies: {  }
-name: 'Operating Regions'
-vid: operating_regions
-description: 'Used for People CPT'
-weight: 0
-new_revision: false

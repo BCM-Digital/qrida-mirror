@@ -1,9 +1,0 @@
-uuid: 4e177668-7d1e-4c5a-b6af-569bc375472a
-langcode: en
-status: true
-dependencies: {  }
-name: Profession
-vid: profession
-description: 'Used for People CPT'
-weight: 0
-new_revision: false

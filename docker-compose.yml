@@ -1,0 +1,27 @@
+services:
+  drupal:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      DB_DATABASE: qrida
+      DB_HOST: db
+      DB_USERNAME: root
+      DB_PASSWORD: my-secret-pw
+      DB_PORT: 3306
+    ports:
+      - "8888:80"
+    volumes:
+      - ./web:/opt/drupal/web
+    restart: "no"
+
+  db:
+    image: mariadb
+    restart: "no"
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: qrida
+      MYSQL_USER: root
+    ports:
+      - "3306:3306"
+      - "6790:6789"

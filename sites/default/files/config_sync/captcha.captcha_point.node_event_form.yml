@@ -1,7 +1,0 @@
-uuid: bd993c0d-ca20-471f-8a42-fb10a26b41e3
-langcode: en
-status: false
-dependencies: {  }
-formId: node_event_form
-captchaType: default
-label: node_event_form

@@ -1,0 +1,23 @@
+FROM drupal:php8.3-apache
+
+RUN apt-get update -y && \
+  apt-get install git-man \
+  git-man less libbsd0 libcurl3-gnutls libedit2 liberror-perl libpcre2-8-0 \
+  libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxext6 libxmuu1 git -y
+
+WORKDIR /opt/drupal
+RUN rm -rf web \
+  rm -rf vendor \
+  rm *.json *.lock
+
+COPY ./composer.json .
+COPY ./composer.lock .
+COPY ./web ./web
+RUN composer install
+
+# COPY ./sites/default/default.settings.php ./web/sites/default/settings.php
+
+RUN chown -R root:www-data ./web/sites/default
+RUN chmod 0766 ./web/sites/default
+
+EXPOSE 80 443

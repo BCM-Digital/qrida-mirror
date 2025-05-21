@@ -1,9 +1,0 @@
-uuid: abedcaf0-697f-4331-94e1-ab71f049dada
-langcode: en
-status: true
-dependencies: {  }
-name: 'Profile role'
-vid: profile_role
-description: 'Used for People CPT'
-weight: 0
-new_revision: false

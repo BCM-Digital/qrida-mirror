@@ -1,0 +1,46 @@
+[
+    {
+        "ParameterKey": "ContainerImage",
+        "ParameterValue": "#{ContainerImage}"
+    },
+    {
+        "ParameterKey": "Prefix",
+        "ParameterValue": "#{Prefix}"
+    },
+    {
+        "ParameterKey": "SiteDomain",
+        "ParameterValue": "#{SiteDomain}"
+    },
+    {
+        "ParameterKey": "DBHost",
+        "ParameterValue": "#{DBHost}"
+    },
+    {
+        "ParameterKey": "DBName",
+        "ParameterValue": "#{DBName}"
+    },
+    {
+        "ParameterKey": "DBPassword",
+        "ParameterValue": "#{DBPassword}"
+    },
+    {
+        "ParameterKey": "DBUsername",
+        "ParameterValue": "#{DBUsername}"
+    },
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "#{EnvironmentName}"
+    },
+    {
+        "ParameterKey": "DBHost",
+        "ParameterValue": "#{DBHost}"
+    },
+    {
+        "ParameterKey": "ExportStackName",
+        "ParameterValue": "#{ExportStackName}"
+    },
+    {
+        "ParameterKey": "ELBListenerRulePriority",
+        "ParameterValue": "#{ELBListenerRulePriority}"
+    }
+]

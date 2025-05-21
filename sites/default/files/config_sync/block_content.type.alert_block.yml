@@ -1,8 +1,0 @@
-uuid: 602a49d1-dfa8-4379-b3ae-13dec969228d
-langcode: en
-status: true
-dependencies: {  }
-id: alert_block
-label: 'Alert block'
-revision: false
-description: 'A block containing an SVG icon, text and alert type.'

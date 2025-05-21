@@ -1,0 +1,52 @@
+image: mcr.microsoft.com/dotnet/sdk:6.0
+
+pipelines:
+  branches:
+    '{main,release/*}':
+      - step:
+          name: 'Generate version number'
+          script:
+            - apt update && apt install -y jq
+            - dotnet tool restore
+            - git fetch --unshallow
+            - gitVersion=$(dotnet dotnet-gitversion /nofetch)
+            - VersionNumber=$(echo $gitVersion | jq -r '.SemVer')
+            - CommitSha=$(echo $gitVersion | jq -r '.ShortSha')
+            - BRANCH_NAME=$(echo $gitVersion | jq -r '.BranchName')
+            - VERSION=$VersionNumber.$BITBUCKET_BUILD_NUMBER-$CommitSha
+            - echo "export VERSION=$VERSION" >> set_env.sh
+            - echo "export BRANCH_NAME=$BRANCH_NAME" >> set_env.sh
+          artifacts:
+            - set_env.sh
+      - step:
+          name: 'Build and Push Docker Image'
+          image: atlassian/default-image:3
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - source set_env.sh
+            - docker build --file Dockerfile.deployed -t "602942109470.dkr.ecr.$AWS_REGION.amazonaws.com/$BITBUCKET_REPO_SLUG:$VERSION" .
+            - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin "602942109470.dkr.ecr.$AWS_REGION.amazonaws.com"
+            - docker push "602942109470.dkr.ecr.$AWS_REGION.amazonaws.com/$BITBUCKET_REPO_SLUG:$VERSION"
+      - step:
+          name: 'Pack and Push Release to Octopus'
+          script:
+            - source set_env.sh
+            - dotnet tool restore
+            - CloudformationPackageName="$BITBUCKET_REPO_SLUG-cloudformation"
+            - dotnet dotnet-octo pack --id="$CloudformationPackageName" --format="zip" --version="$VERSION" --basePath=".deploy" --outFolder=".artifacts/nuget"
+            - dotnet dotnet-octo push --package=".artifacts/nuget/$CloudformationPackageName.$VERSION.zip" --server="http://octopus.april9.dev/" --apiKey="$OCTOPUS_API_KEY"
+            - OctopusChannel='Unstable'
+            - |
+              if [[ "$BRANCH_NAME" == "main" ]]; then
+                OctopusChannel=Release
+              fi
+            - dotnet dotnet-octo create-release --project="$BITBUCKET_REPO_SLUG" --server="http://octopus.april9.dev/" --apiKey="$OCTOPUS_API_KEY" --version="$VERSION" --channel="$OctopusChannel" --packageVersion="$VERSION"
+          artifacts:
+            - .artifacts
+
+definitions:
+  caches:
+    docker: /var/lib/docker

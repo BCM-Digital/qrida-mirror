@@ -1,8 +1,0 @@
-uuid: 3911dda2-2003-4cca-bfcf-2b3b7c05a1c7
-langcode: en
-status: true
-dependencies: {  }
-id: top-header-menu
-label: 'Top header menu'
-description: 'Menu appears next to search form'
-locked: false

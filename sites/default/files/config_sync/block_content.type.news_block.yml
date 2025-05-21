@@ -1,8 +1,0 @@
-uuid: dbd0a283-6bff-4750-85bd-32d410152e7f
-langcode: en
-status: true
-dependencies: {  }
-id: news_block
-label: 'News block'
-revision: false
-description: ''

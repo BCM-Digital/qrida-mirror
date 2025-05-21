@@ -1,9 +1,0 @@
-uuid: e0197d02-c813-46f7-848e-5fd14b2e6acd
-langcode: en
-status: true
-dependencies: {  }
-name: 'Areas of experience'
-vid: areas_of_experience
-description: 'Used for People CPT'
-weight: 0
-new_revision: false

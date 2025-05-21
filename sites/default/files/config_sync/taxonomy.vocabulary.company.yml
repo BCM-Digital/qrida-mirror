@@ -1,9 +1,0 @@
-uuid: 02a17e66-aede-486c-8256-1dbb7164452a
-langcode: en
-status: true
-dependencies: {  }
-name: Company
-vid: company
-description: 'Used for People CPT'
-weight: 0
-new_revision: false

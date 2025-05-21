@@ -1,9 +1,0 @@
-uuid: 336710e3-60ca-43df-9f9b-5ea08f492db4
-langcode: en
-status: true
-dependencies: {  }
-name: Industry
-vid: industry
-description: 'Used for People CPT'
-weight: 0
-new_revision: false

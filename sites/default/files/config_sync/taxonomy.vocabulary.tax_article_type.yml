@@ -1,9 +1,0 @@
-uuid: df562139-04c7-448c-b491-1907ae72d3e9
-langcode: en
-status: true
-dependencies: {  }
-name: 'Article type'
-vid: tax_article_type
-description: 'Used for Article CPT'
-weight: 0
-new_revision: false

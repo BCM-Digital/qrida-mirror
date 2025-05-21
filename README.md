@@ -1,75 +1,79 @@
-<img alt="Drupal Logo" src="https://www.drupal.org/files/Wordmark_blue_RGB.png" height="60px">
+# QRIDA CMS
 
-Drupal is an open source content management platform supporting a variety of
-websites ranging from personal weblogs to large community-driven websites. For
-more information, visit the Drupal website, [Drupal.org][Drupal.org], and join
-the [Drupal community][Drupal community].
+## Project Overview
 
-## Contributing
+The QRIDA (Queensland Rural and Industry Development Authority) website is a content management system (CMS) built on Drupal. It provides information, services, and program management for Queensland's rural and industry development initiatives. The site is designed for scalability, security, and ease of content management by QRIDA staff.
 
-Drupal is developed on [Drupal.org][Drupal.org], the home of the international
-Drupal community since 2001!
+**Tech Stack:**
+- [Drupal 10/11](https://www.drupal.org/) (PHP CMS)
+- Docker (for local development and containerization)
+- AWS (ECS, Aurora, EFS, S3, etc.)
+- Bitbucket Pipelines (CI/CD)
 
-[Drupal.org][Drupal.org] hosts Drupal's [GitLab repository][GitLab repository],
-its [issue queue][issue queue], and its [documentation][documentation]. Before
-you start working on code, be sure to search the [issue queue][issue queue] and
-create an issue if your aren't able to find an existing issue.
+## How the Website Works
 
-Every issue on Drupal.org automatically creates a new community-accessible fork
-that you can contribute to. Learn more about the code contribution process on
-the [Issue forks & merge requests page][issue forks].
+- **Drupal CMS**: The site is powered by Drupal, using a mix of core, contributed, and custom modules and themes.
+- **Key Modules**: Includes modules for accessibility, security, forms (Webform), content moderation, email (SMTP/SES), analytics, and more (see `composer.json`).
+- **Content Management**: Editors manage content via the Drupal admin interface. Content types, blocks, and views are used to structure and display information.
+- **Customizations**: Custom modules and themes are located in `web/modules/custom` and `web/themes/custom`.
 
-## Usage
+## AWS Configuration
 
-For a brief introduction, see [USAGE.txt](/core/USAGE.txt). You can also find
-guides, API references, and more by visiting Drupal's [documentation
-page][documentation].
+The site is deployed on AWS using a modern, scalable architecture:
+- **ECS (Elastic Container Service)**: Runs the Drupal application in Docker containers.
+- **Aurora (RDS)**: Managed MySQL-compatible database for content storage.
+- **EFS (Elastic File System)**: Shared file storage for Drupal's files directory.
+- **S3**: Used for file storage and backups (see `scripts/sync-s3.sh`).
+- **CloudFormation**: Infrastructure as code templates in `.deploy/` (see `bcm_app_cloudformation.yml`).
+- **Bitbucket Pipelines**: CI/CD pipeline builds Docker images, pushes to ECR, and triggers deployments.
+- **Environment Variables**: Sensitive data (DB credentials, SMTP, etc.) are managed via AWS Secrets Manager or environment variables.
 
-You can quickly extend Drupal's core feature set by installing any of its
-[thousands of free and open source modules][modules]. With Drupal and its
-module ecosystem, you can often build most or all of what your project needs
-before writing a single line of code.
+## Patching and Upgrade Process
 
-## Changelog
+- **Patching**: Managed via [composer-patches](https://github.com/cweagans/composer-patches). Patches are listed in `composer.json` under `extra.patches` and in module-specific `PATCHES.txt` files.
+    - To apply a patch: run `composer install` or `composer update`.
+    - To revert a patch: remove it from `composer.json` and re-run composer.
+- **Upgrades**:
+    - **Drupal Core & Modules**: Use Composer (`composer update drupal/core --with-all-dependencies`).
+    - **Database Updates**: After code updates, run `/update.php` or `drush updb` to apply database schema changes.
+    - **Recent Work**: Recent commits include SMTP/SES integration, module upgrades, and security patches.
 
-Drupal keeps detailed [change records][changelog]. You can search Drupal's
-changes for a record of every notable breaking change and new feature since
-2011.
+## Local Development & Running the Project
 
-## Security
+- **Requirements**: Docker, Docker Compose, and (optionally) PowerShell for `run-local.ps1`.
+- **Start Locally**:
+    1. Clone the repo.
+    2. Run `./run-local.ps1` (Windows/PowerShell) or `docker-compose up --build` (manual).
+    3. Access the site at [http://localhost:8888](http://localhost:8888).
+- **Local Settings**: Copy `web/sites/example.settings.local.php` to `web/sites/default/settings.local.php` and adjust as needed.
+- **Sync Files from S3**: Use `scripts/sync-s3.sh` to download files from the S3 bucket for local development.
 
-For a list of security announcements, see the [Security advisories
-page][Security advisories] (available as [an RSS feed][security RSS]). This
-page also describes how to subscribe to these announcements via email.
+## Maintenance & Management
 
-For information about the Drupal security process, or to find out how to report
-a potential security issue to the Drupal security team, see the [Security team
-page][security team].
+- **Regular Tasks**:
+    - Update modules and core with Composer.
+    - Run database updates (`/update.php` or `drush updb`).
+    - Clear cache (`drush cr`).
+    - Review security updates and apply patches as needed.
+    - Back up database and files regularly (see `backup_migrate` module).
+- **Security**:
+    - Use modules like `login_security`, `seckit`, and `captcha` for enhanced protection.
+    - Review user permissions and roles regularly.
+- **Maintenance Mode**: Enable via Drupal admin or Drush (`drush sset system.maintenance_mode 1`).
 
-## Need a helping hand?
+## Recent Work & Commit History
 
-Visit the [Support page][support] or browse [over a thousand Drupal
-providers][service providers] offering design, strategy, development, and
-hosting services.
+- **Recent Upgrades**: SMTP/SES integration, module and core updates, security patches.
+- **Tracking Changes**: Use `git log` and commit messages for a history of changes. Major upgrades and patches should be documented in this README or a `CHANGELOG.md`.
 
-## Legal matters
+## Additional Resources
 
-Know your rights when using Drupal by reading Drupal core's
-[license](/core/LICENSE.txt).
+- [Drupal User Guide](https://www.drupal.org/docs/user_guide/en/index.html)
+- [Drupal Update & Upgrade Guide](https://www.drupal.org/docs/updating-drupal)
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [Composer](https://getcomposer.org/)
+- [Docker](https://docs.docker.com/)
 
-Learn about the [Drupal trademark and logo policy here][trademark].
+---
 
-[Drupal.org]: https://www.drupal.org
-[Drupal community]: https://www.drupal.org/community
-[GitLab repository]: https://git.drupalcode.org/project/drupal
-[issue queue]: https://www.drupal.org/project/issues/drupal
-[issue forks]: https://www.drupal.org/drupalorg/docs/gitlab-integration/issue-forks-merge-requests
-[documentation]: https://www.drupal.org/documentation
-[changelog]: https://www.drupal.org/list-changes/drupal
-[modules]: https://www.drupal.org/project/project_module
-[security advisories]: https://www.drupal.org/security
-[security RSS]: https://www.drupal.org/security/rss.xml
-[security team]: https://www.drupal.org/drupal-security-team
-[service providers]: https://www.drupal.org/drupal-services
-[support]: https://www.drupal.org/support
-[trademark]: https://www.drupal.com/trademark
+For any questions or issues, please contact the QRIDA digital team or your technical lead. 
