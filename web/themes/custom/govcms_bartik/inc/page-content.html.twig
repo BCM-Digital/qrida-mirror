@@ -3,6 +3,9 @@
     <section class="section">
       <a id="main-content" tabindex="-1"></a>
       {{ page.hero }}
+      <div class="container mb-3">
+        {{ drupal_breadcrumb() }}
+      </div>
       {{ page.content }}
     </section>
   </main>
