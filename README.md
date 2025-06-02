@@ -74,6 +74,19 @@ The site is deployed on AWS using a modern, scalable architecture:
 - [Composer](https://getcomposer.org/)
 - [Docker](https://docs.docker.com/)
 
+## Post-merge steps
+
+After pulling this pull request into `main` or deploying to another environment,
+make sure Drupal picks up the new templates and configuration.
+
+1. Run `composer install` to install any new PHP dependencies.
+2. Apply database updates with `drush updb` (or visit `/update.php`).
+3. Import updated configuration with `drush cim -y` if configuration exports are
+   present.
+4. Rebuild caches with `drush cr` so the new Twig files and theme changes take
+   effect.
+
+
 ---
 
 For any questions or issues, please contact the QRIDA digital team or your technical lead. 
