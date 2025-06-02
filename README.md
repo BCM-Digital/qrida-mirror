@@ -7,7 +7,6 @@ The QRIDA (Queensland Rural and Industry Development Authority) website is a con
 **Tech Stack:**
 - [Drupal 10/11](https://www.drupal.org/) (PHP CMS)
 - Docker (for local development and containerization)
-- AWS (ECS, Aurora, EFS, S3, etc.)
 - Bitbucket Pipelines (CI/CD)
 
 ## How the Website Works
@@ -23,10 +22,13 @@ The site is deployed on AWS using a modern, scalable architecture:
 - **ECS (Elastic Container Service)**: Runs the Drupal application in Docker containers.
 - **Aurora (RDS)**: Managed MySQL-compatible database for content storage.
 - **EFS (Elastic File System)**: Shared file storage for Drupal's files directory.
-- **S3**: Used for file storage and backups (see `scripts/sync-s3.sh`).
 - **CloudFormation**: Infrastructure as code templates in `.deploy/` (see `bcm_app_cloudformation.yml`).
 - **Bitbucket Pipelines**: CI/CD pipeline builds Docker images, pushes to ECR, and triggers deployments.
 - **Environment Variables**: Sensitive data (DB credentials, SMTP, etc.) are managed via AWS Secrets Manager or environment variables.
+
+### Local environment file
+
+Copy `.env.example` to `.env` and adjust values for your local setup. The helper scripts (e.g., `sync-efs.sh` and `import-db.sh`) automatically load this file so you don't need to hard‑code paths or credentials in the scripts.
 
 ## Patching and Upgrade Process
 
@@ -46,8 +48,8 @@ The site is deployed on AWS using a modern, scalable architecture:
     2. Run `./run-local.ps1` (Windows/PowerShell) or `docker-compose up --build` (manual).
     3. Access the site at [http://localhost:8888](http://localhost:8888).
 - **Local Settings**: Copy `web/sites/example.settings.local.php` to `web/sites/default/settings.local.php` and adjust as needed.
-- **Sync Files from S3**: Use `scripts/sync-s3.sh` to download files from the S3 bucket for local development.
 
+- **Sync Files**: Use `scripts/sync-efs.sh` to copy media between EFS volumes for local development.
 ## Maintenance & Management
 
 - **Regular Tasks**:
