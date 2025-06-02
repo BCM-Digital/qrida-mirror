@@ -65,3 +65,16 @@ font-awesome:
   css:
     theme:
       css/fontawesome.css: {}
+
+two-column:
+  css:
+    theme:
+      css/layouts/two-column.css: {}
+
+global-scripts:
+  js:
+    js/index.js: { attributes: { defer: true } }
+
+countdown-timer:
+  js:
+    js/countdown-timer.js: { attributes: { defer: true } }

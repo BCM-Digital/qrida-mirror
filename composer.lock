@@ -2160,16 +2160,16 @@
         },
         {
             "name": "drupal/entity_usage",
-            "version": "2.0.0-beta24",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_usage.git",
-                "reference": "8.x-2.0-beta24"
+                "reference": "8.x-2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_usage-8.x-2.0-beta24.zip",
-                "reference": "8.x-2.0-beta24",
+                "url": "https://ftp.drupal.org/files/projects/entity_usage-8.x-2.0.zip",
+                "reference": "8.x-2.0",
                 "shasum": "063cf50d2b5cf7c99bb86a818c03fcfef2082151"
             },
             "require": {
@@ -2190,11 +2190,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta24",
+                    "version": "8.x-2.0",
                     "datestamp": "1743745774",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -3147,61 +3147,6 @@
             }
         },
         {
-            "name": "drupal/phpmailer_smtp",
-            "version": "2.2.6",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/phpmailer_smtp.git",
-                "reference": "2.2.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/phpmailer_smtp-2.2.6.zip",
-                "reference": "2.2.6",
-                "shasum": "37a7a2324f421fb1980346ef809eee2ee0b87c66"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9 || ^10 || ^11",
-                "phpmailer/phpmailer": "^6.9.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.2.6",
-                    "datestamp": "1723783758",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Ian McLean (imclean)",
-                    "homepage": "http://drupal.org/u/imclean"
-                }
-            ],
-            "description": "Uses the PHPMailer library to send emails via SMTP.",
-            "homepage": "https://drupal.org/project/phpmailer_smtp",
-            "keywords": [
-                "drupal",
-                "email",
-                "mail",
-                "mail system",
-                "mailsystem",
-                "phpmailer",
-                "smtp"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/phpmailer_smtp",
-                "issues": "https://www.drupal.org/project/issues/phpmailer_smtp"
-            }
-        },
-        {
             "name": "drupal/r4032login",
             "version": "2.2.3",
             "source": {
@@ -3868,16 +3813,16 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.3.0-beta2",
+            "version": "6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.3.0-beta2"
+                "reference": "6.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.3.0-beta2.zip",
-                "reference": "6.3.0-beta2",
+                "url": "https://ftp.drupal.org/files/projects/webform-6.3.0.zip",
+                "reference": "6.3.0",
                 "shasum": "02e45bf3716c6e81846a9b77837782a43053e6f9"
             },
             "require": {
@@ -3923,11 +3868,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.3.0-beta2",
+                    "version": "6.3.0",
                     "datestamp": "1742582977",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -3975,16 +3920,16 @@
         },
         {
             "name": "drupal/webform_media",
-            "version": "1.0.0-beta2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform_media.git",
-                "reference": "1.0.0-beta2"
+                "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform_media-1.0.0-beta2.zip",
-                "reference": "1.0.0-beta2",
+                "url": "https://ftp.drupal.org/files/projects/webform_media-1.0.0.zip",
+                "reference": "1.0.0",
                 "shasum": "0689af25701ff7d53099a0a9d89c279ad8d86ed0"
             },
             "require": {
@@ -3994,11 +3939,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-beta2",
+                    "version": "1.0.0",
                     "datestamp": "1689897867",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },

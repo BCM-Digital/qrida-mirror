@@ -22,5 +22,11 @@ regions:
   footer_bottom: 'Footer Bottom'
 libraries:
   - govcms_bartik/govcms-bartik-styling
+  - govcms_bartik/global-scripts
 ckeditor5-stylesheets:
   - css/ck5-stylesheet.css
+layouts:
+  two_column:
+    layout: two_column
+    library:
+      - govcms_bartik/two-column

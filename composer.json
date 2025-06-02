@@ -29,7 +29,7 @@
         "drupal/ctools": "4.1",
         "drupal/editor_advanced_link": "^2.2",
         "drupal/entity_reference_revisions": "^1.9",
-        "drupal/entity_usage": "^2.0@beta",
+        "drupal/entity_usage": "^2.0",
         "drupal/field_group": "^3.2",
         "drupal/field_timer": "^1.3 || 2.0.2",
         "drupal/google_analytics": "4.0.3",
@@ -43,7 +43,6 @@
         "drupal/metatag": "2.1.0",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.9",
-        "drupal/phpmailer_smtp": "2.2.6",
         "drupal/r4032login": "2.2.3",
         "drupal/redirect": "^1.7",
         "drupal/scheduled_transitions": "^2.8",
@@ -54,8 +53,9 @@
         "drupal/tour": "^2.0",
         "drupal/twig_debugger": "1.1.4",
         "drupal/twig_tweak": "^3.4",
-        "drupal/webform": "^6.3@beta",
-        "drupal/webform_media": "^1.0@beta",
+        "drupal/webform": "^6.3",
+        "drupal/webform_media": "^1.0",
+        "drupal/honeypot": "^2.0",
         "drupal/xmlsitemap": "^2.0",
         "drush/drush": "^13.6",
         "mglaman/composer-drupal-lenient": "^1.0",
@@ -138,7 +138,7 @@
                 "Fix image captcha refresh issue": "https://www.drupal.org/files/issues/2025-02-12/image_captcha_refresh-3489166-14.patch"
             },
             "drupal/webform_media": {
-                "Fix webform media rector issue": "https://www.drupal.org/files/issues/2024-03-25/webform_media.1.0.0-beta2.rector.patch"
+                "Fix webform media rector issue": "https://www.drupal.org/files/issues/2024-03-25/webform_media.1.0.0.rector.patch"
             }
         },
         "drupal-lenient": {
