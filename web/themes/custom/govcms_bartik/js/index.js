@@ -1,66 +1,63 @@
-jQuery( document ).ready( function( $ ) {
+document.addEventListener('DOMContentLoaded', () => {
   console.log('JS Initialized');
 
-  var hash = window.location.hash;
-  var target = hash.split('#')[1];
+  const hash = window.location.hash;
+  const target = hash.split('#')[1];
+  if (hash) {
+    document.querySelectorAll('.nav-pill .btn').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active', 'show'));
+    const tab = document.querySelector(hash);
+    if (tab) tab.classList.add('active');
+    const pane = document.querySelector('.tab-pane[aria-labelledby="' + target + '"]');
+    if (pane) pane.classList.add('active', 'show');
+  }
 
-  if(hash) {
-    $('.nav-pill .btn').removeClass('active');
-    $('.tab-pane').removeClass('active show');
-    $(hash).addClass('active');
-    $('.tab-pane[aria-labelledby="' + target + '"]').addClass('active show');
-  };
-
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100){
-      $('.scroll-top').addClass('active');
-      $('.scroll-top').on('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    } else {
-      $('.scroll-top').removeClass('active');
-    }
-  });
-
-  $(function() {
-    // $('a[href^="mailto:"]').each(function() {
-    $('a.obfuscate-email').each(function() {
-      this.href = this.href.replaceAll('[at]', '@').replaceAll('[dot]', '.');
-      
-      // Remove this line if you don't want to set the email address as link text:
-      this.innerHTML = this.href.replace('mailto:', '');
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.scroll-top').forEach(btn => {
+      if (window.scrollY > 100) {
+        btn.classList.add('active');
+        btn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      } else {
+        btn.classList.remove('active');
+      }
     });
   });
 
-  // $(function() {
-  //   $('a.obfuscate-phone').each(function() {
-  //     var chars = $(this).text().split('');
-  //     $(chars).each(function() {
-  //       $(this).wrapAll('<span></span>');
-  //     });
-  //   });
-  // });
+  document.querySelectorAll('a.obfuscate-email').forEach(link => {
+    link.href = link.href.replaceAll('[at]', '@').replaceAll('[dot]', '.');
+    link.textContent = link.href.replace('mailto:', '');
+  });
 
-  if($('.views-all-people').length) {
+  if (document.querySelector('.views-all-people')) {
     Drupal.behaviors.myBehavior = {
-      attach: function (context, settings) {
-        $('input[data-drupal-selector="edit-field-postcodes-target-id"]').prop('maxlength', 4);
-        $('input[data-drupal-selector="edit-field-postcodes-target-id"]').attr('data-autocomplete-path', null);
-        $('select[data-drupal-selector="edit-field-region-target-id"]').on('change', function() {
-          $('input[data-drupal-selector="edit-field-postcodes-target-id"]').prop('value', null);
-        });
-        $('input[data-drupal-selector="edit-field-postcodes-target-id"]').on('focus', function() {
-          $('option[value="All"]').prop('selected', true);
-        });
-        once('filterByPostcode', 'input.js-form-submit', context).forEach(function (element) {
-          $(element).addClass('postcode-filtered');
-
-          if($('.people-card').length) {
-            var regionID = $('.people-card').data('region-id');
-            $('option[value="' + regionID + '"]').prop('selected', true);
-          };
+      attach: function (context) {
+        const postcode = context.querySelector('input[data-drupal-selector="edit-field-postcodes-target-id"]');
+        const regionSelect = context.querySelector('select[data-drupal-selector="edit-field-region-target-id"]');
+        if (postcode) {
+          postcode.maxLength = 4;
+          postcode.removeAttribute('data-autocomplete-path');
+          postcode.addEventListener('focus', () => {
+            const allOpt = regionSelect?.querySelector('option[value="All"]');
+            if (allOpt) allOpt.selected = true;
+          });
+        }
+        if (regionSelect) {
+          regionSelect.addEventListener('change', () => {
+            if (postcode) postcode.value = '';
+          });
+        }
+        once('filterByPostcode', 'input.js-form-submit', context).forEach(element => {
+          element.classList.add('postcode-filtered');
+          const peopleCard = document.querySelector('.people-card');
+          if (peopleCard) {
+            const regionID = peopleCard.dataset.regionId;
+            const opt = regionSelect?.querySelector('option[value="' + regionID + '"]');
+            if (opt) opt.selected = true;
+          }
         });
       }
     };
-  };
+  }
 });

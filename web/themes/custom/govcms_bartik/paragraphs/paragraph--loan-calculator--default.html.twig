@@ -66,65 +66,65 @@
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {% attach_library 'govcms_bartik/global-scripts' %}
     <script>
-    $(document).ready(function () {
+    document.addEventListener('DOMContentLoaded', function () {
       var calc_loan = function() {
         var value_monthly = 0;
         var value_quarterly = 0;
         var value_half = 0;
         var value_yearly = 0;
 
-        var n = $('#repayment_slider').val() * 12;
-        var r = ($('#interest_slider').val() / 100) / 12;
+        var n = document.getElementById('repayment_slider').value * 12;
+        var r = (document.getElementById('interest_slider').value / 100) / 12;
         var R = Math.pow(r + 1, n);
-        var P = $('#amount_value').val();
+        var P = document.getElementById('amount_value').value;
 
         value_monthly = (P) * ((r * (R)) / (R - 1));
         value_quarterly = (value_monthly * 3);
         value_biyearly = (value_monthly * 6);
         value_yearly = (value_monthly * 12);
 
-        $('#installment_monthly').text("$ " + value_monthly.toFixed(2));
-        $('#installment_quarterly').text("$ " + value_quarterly.toFixed(2));
-        $('#installment_biyearly').text("$ " + value_biyearly.toFixed(2));
-        $('#installment_yearly').text("$ " + value_yearly.toFixed(2));
+        document.getElementById('installment_monthly').textContent = "$ " + value_monthly.toFixed(2);
+        document.getElementById('installment_quarterly').textContent = "$ " + value_quarterly.toFixed(2);
+        document.getElementById('installment_biyearly').textContent = "$ " + value_biyearly.toFixed(2);
+        document.getElementById('installment_yearly').textContent = "$ " + value_yearly.toFixed(2);
       }
-      $('#amount_value').val($('#amount_slider').val());
-      $('#repayment_value').val($('#repayment_slider').val());
-      $('#interest_value').val($('#interest_slider').val());
+      document.getElementById('amount_value').value = document.getElementById('amount_slider').value;
+      document.getElementById('repayment_value').value = document.getElementById('repayment_slider').value;
+      document.getElementById('interest_value').value = document.getElementById('interest_slider').value;
 
-      $('#amount_value').change(function(event) {
+      document.getElementById('amount_value').addEventListener('change', function() {
         calc_loan();
       });
 
-      $('#amount_value').change(function(event) {
-        $('#amount_slider').val($('#amount_value').val());
+      document.getElementById('amount_value').addEventListener('change', function() {
+        document.getElementById('amount_slider').value = document.getElementById('amount_value').value;
         calc_loan();
       });
 
-      $('#amount_slider').change(function(event) {
-        $('#amount_value').val($('#amount_slider').val());
+      document.getElementById('amount_slider').addEventListener('change', function() {
+        document.getElementById('amount_value').value = document.getElementById('amount_slider').value;
         calc_loan();
       });
 
-      $('#repayment_value').change(function(event) {
-        $('#repayment_slider').val($('#repayment_value').val());
+      document.getElementById('repayment_value').addEventListener('change', function() {
+        document.getElementById('repayment_slider').value = document.getElementById('repayment_value').value;
         calc_loan();
       });
 
-      $('#repayment_slider').change(function(event) {
-        $('#repayment_value').val($('#repayment_slider').val());
+      document.getElementById('repayment_slider').addEventListener('change', function() {
+        document.getElementById('repayment_value').value = document.getElementById('repayment_slider').value;
         calc_loan();
       });
 
-      $('#interest_value').change(function(event) {
-        $('#interest_slider').val($('#interest_value').val())
+      document.getElementById('interest_value').addEventListener('change', function() {
+        document.getElementById('interest_slider').value = document.getElementById('interest_value').value;
         calc_loan();
       });
 
-      $('#interest_slider').change(function(event) {
-        $('#interest_value').val($('#interest_slider').val());
+      document.getElementById('interest_slider').addEventListener('change', function() {
+        document.getElementById('interest_value').value = document.getElementById('interest_slider').value;
         calc_loan();
       });
     });

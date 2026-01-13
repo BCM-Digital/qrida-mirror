@@ -568,15 +568,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'drupal/phpmailer_smtp' => array(
-            'pretty_version' => '2.2.6',
-            'version' => '2.2.6.0',
-            'reference' => '2.2.6',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../web/modules/contrib/phpmailer_smtp',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'drupal/r4032login' => array(
             'pretty_version' => '2.2.3',
             'version' => '2.2.3.0',

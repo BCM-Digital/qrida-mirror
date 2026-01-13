@@ -1,0 +1,3 @@
+.layout-two-column { display: flex; flex-wrap: wrap; }
+.layout-two-column .layout-region--left { padding-right: 1rem; }
+.layout-two-column .layout-region--right { padding-left: 1rem; }
